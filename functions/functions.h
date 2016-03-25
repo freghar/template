@@ -1,6 +1,6 @@
 class CfgFunctions
 {
-    class T
+    class A3MT
     {
         class Example
         {

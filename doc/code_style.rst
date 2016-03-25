@@ -115,11 +115,11 @@ Variable / object scope
 
 - for global function names, use the conventional TAG
 
-  - eg. T_fnc_myFunc
+  - eg. A3MT_fnc_myFunc
 
 - for global and publicVariables, prefix the conventional TAG, followed by '_'
 
-  - eg. T_my_global_var
+  - eg. A3MT_my_global_var
 
 Rationale:
 Variable locality allows code re-use and re-entrance. Consistent prefixes on
