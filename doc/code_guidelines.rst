@@ -1,6 +1,32 @@
 These are more free-form and general coding guidelines, for a more formal style
 specification, see code_style.txt.
 
+Keeping template generic
+========================
+
+This template should be a base for missions, a framework. It may be tempting,
+however, to hardcode some aspects and structures one's community uses for the
+sake of simplicity.
+
+This might come in the form of hardcoded group names (IDs) for units, modded
+radio channels, or even generic-ish tuning of global variables used by some
+mods to alter the behavior of these mods.
+
+This approach however limits the template to a specific gameplay and mission
+setup style, ie. "regular army" missions with an organized radio net, making
+it difficult or unusable for other styles, ie. guerilla/civilian missions.
+
+It is highly advised, if not required, to design the template functionality
+in an opt-in way, which mission creators can easily enable, but also don't have
+to.
+For example - need to adjust a global variable from a mod? Create a function
+to do that and let the mission creator use it. Have multiple of these, altering
+the mod for a specific style? Have a function that calls the other (smaller)
+functions and let the mission creator use this aggregating function.
+
+**Do not** assume how the template is used, do not design mission styles into
+the template, but do provide tools for the mission creator to do so.
+
 Function API specification
 ==========================
 
