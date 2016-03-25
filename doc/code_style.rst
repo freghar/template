@@ -132,10 +132,6 @@ Scripting commands and BIS functions
 
   - many scripting commands started as, now deprecated, BIS functions
 
-- use 'forEach' instead of 'count'
-
-  - the latter is insignificantly faster, but less intuitive / common
-
 - use 'param' instead of BIS_fnc_param
 
 Rationale:
