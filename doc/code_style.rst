@@ -12,6 +12,11 @@ Indent style
 
     - unless empty, in which case use no whitespace, eg. '{}'
 
+  - at least one whitespace when comma-separated, eg. '[var1, var2]'
+
+    - exceptions allowed for many identical fixed-length identifiers,
+      to preserve readability, eg. '[1,2,3,4,5,6,7,8,9]'
+
 - Allman braces for class-defining files
 
   - space-separated inheritance delimiter, eg. 'class one : two {'
@@ -32,6 +37,7 @@ Identifier naming
 - function names are in camelCase (first letter lowercase)
 - variables are in snake_case and all lowercase
 - class names are in CamelCase (first letter uppercase)
+- prefer C-style operators (eg. '&&' instead of 'and')
 
 Rationale:
 Again, all of these are de-facto Arma code standards, reference BI code or any
