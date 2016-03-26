@@ -63,17 +63,25 @@ Comments
 
 - both block /* */ and line // comments are allowed::
 
-    /* this is an example
-     * of a block comment
+    /*
+     * this is an example
+     * of a normal block comment
+     * great for longer text
      */
+
+    /* this is an example
+     * of a compact block comment */
+
+    /* this is block comment one-liner */
 
     // this is an example
     // of a line comment
 
-- generally, for multiline text, use block /* */ comments
+- generally, for multiline text, use block /* */ comments and indent each
+  new line with a leading asterisk
 
 - for debugging purposes and disabled code, prefer line comments or block
-  comments with as little added text as possible::
+  comments with as little added overhead as possible::
 
     //disabled = 0
     //code = 1
@@ -95,8 +103,7 @@ Comments
 
     /* block comment
      * preventing outside
-     * block-commenting-out
-     */
+     * block-commenting-out */
     disabled = 2
     code = 3
     #endif

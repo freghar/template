@@ -72,7 +72,8 @@ Consider::
 
 Versus::
 
-    /* Prepares dinner using exactly 4 ingredients, given as a 4-member
+    /*
+     * Prepares dinner using exactly 4 ingredients, given as a 4-member
      * '_ingreds' array, each ingredient specifying [type, amount],
      * making '_meals' dishes in total.
      * Returns a total of '_meals' finished meals as an array.

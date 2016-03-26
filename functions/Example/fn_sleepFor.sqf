@@ -1,4 +1,5 @@
-/* pause execution in a scheduled environment for '_secs' seconds specified,
+/*
+ * pause execution in a scheduled environment for '_secs' seconds specified,
  * return immediately in a non-scheduled environment
  */
 
