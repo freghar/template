@@ -27,6 +27,21 @@ functions and let the mission creator use this aggregating function.
 **Do not** assume how the template is used, do not design mission styles into
 the template, but do provide tools for the mission creator to do so.
 
+Keeping features simple
+=======================
+
+Generic approach in mind should be applied to the feature scope as well,
+that is - aim for universal functionality, not for mod compatibility. If
+possible, don't explicitly design for mod interoperability, design a way
+which doesn't need mod-specific workarounds.
+
+If the functionality cannot be implemented in a generic way and/or it conflicts
+with most mods, perhaps it provides functionality similar to some of the mods,
+consider *not* including it in this template.
+
+Remember - the main goal is to be the toolbox for the mission creator, not
+a full blown mod pretending to be a mission framework.
+
 Function API specification
 ==========================
 
