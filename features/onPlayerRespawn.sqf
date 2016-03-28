@@ -1,5 +1,7 @@
 #include "..\include\common.h"
 
 #ifdef FEAT_ARSENAL_RESPAWN
-#include "Arsenal_Respawn\description.ext"
+_this call {
+#include "Arsenal_Respawn\onPlayerRespawn.sqf"
+};
 #endif
