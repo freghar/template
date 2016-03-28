@@ -1,10 +1,4 @@
-class CfgFunctions
+class Example
 {
-    class A3MT
-    {
-        class Example
-        {
-            class sleepFor;
-        };
-    };
+    class sleepFor;
 };

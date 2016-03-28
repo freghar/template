@@ -1,2 +1,8 @@
+class CfgFunctions
+{
+    class A3MT
+    {
 #include "functions\functions.h"
-#include "features\description.ext"
+#include "features\functions.h"
+    };
+};
