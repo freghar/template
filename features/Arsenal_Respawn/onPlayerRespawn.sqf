@@ -14,10 +14,9 @@ params ["_new", "_old", "_type", "_delay"];
  * hurt, but causes unnecessary animations and code to run
  * https://community.bistudio.com/wiki/Initialization_Order
  */
-if (_type != 2 && _type != 3) exitWith {};
-if (!isNull _old) then {
-    if (_type == 2) then {
-        hideBody _old;
-    };
+if ((_type == 2 || _type == 3) && (!isNull _old)) then {
+#ifdef FEAT_ARSENAL_RESPAWN_HIDEBODY
+    hideBody _old;
+#endif
     _new call A3MT_fnc_loadSpawnGear;
 };
