@@ -11,3 +11,9 @@ call {
 #include "Arsenal_Respawn\init.sqf"
 };
 #endif
+
+#ifdef FEAT_ARES_EXTRAS
+call {
+#include "Ares_Extras\init.sqf"
+};
+#endif

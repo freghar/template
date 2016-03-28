@@ -3,10 +3,6 @@ class AI
     class haulAss;
     class sitDown;
 };
-class Ares
-{
-    class addAres;
-};
 class Environment
 {
     class hideTerrain;

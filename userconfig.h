@@ -17,6 +17,10 @@
 /* - optionally, hide (despawn) corpses on respawn */
 //#define FEAT_ARSENAL_RESPAWN_HIDEBODY
 
+/* register useful extra functions to the Ares/Zeus interface,
+ * Requires: Ares */
+//#define FEAT_ARES_EXTRAS
+
 /*
  * Gameplay style specifics
  */
