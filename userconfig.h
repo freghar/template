@@ -11,7 +11,8 @@
 //#define FEAT_HIDE_BODY
 
 /* save player loadout on first spawn, restore it on each respawn,
- * designed for the Eden Arsenal functionality, but may work elsewhere */
+ * designed for the Eden Arsenal functionality, but may work elsewhere,
+ * Requires: ACE3 */
 //#define FEAT_ARSENAL_RESPAWN
 /* - optionally, hide (despawn) corpses on respawn */
 //#define FEAT_ARSENAL_RESPAWN_HIDEBODY
