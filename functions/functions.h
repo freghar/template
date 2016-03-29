@@ -16,3 +16,9 @@ class Misc
 {
     class oneChannel;
 };
+class Multiplayer
+{
+    class call;
+    class spawn;
+    class remoteCode;
+};
