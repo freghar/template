@@ -2,12 +2,100 @@
  * register custom modules/functions in Ares
  */
 
-private _modules = [
-    ["A3MT", "Add objects to curator",  A3MT_fnc_aresAddToCurator],
-    ["A3MT", "Turn group into cowards", A3MT_fnc_aresFleeing],
-    ["A3MT", "Make group immortal",     A3MT_fnc_aresImmortal],
-    ["A3MT", "Make group mortal",       A3MT_fnc_aresMortal],
-    ["A3MT", "Move group under server", A3MT_fnc_aresMoveUnderServer]
-];
+/*
+ * AI
+ */
 
-{ _x call Ares_fnc_RegisterCustomModule; } forEach _modules;
+[
+    "A3MT - AI",
+    "[G] Fleeing - On",
+    {
+        [{ _this allowFleeing 1 }, _this] call A3MT_fnc_aresForGroups;
+    }
+] call Ares_fnc_RegisterCustomModule;
+[
+    "A3MT - AI",
+    "[G] Fleeing - Off",
+    {
+        [{ _this allowFleeing 0 }, _this] call A3MT_fnc_aresForGroups;
+    }
+] call Ares_fnc_RegisterCustomModule;
+
+/*
+ * Caching
+ */
+
+#ifdef undefined
+[
+    "A3MT - Caching",
+    "[G] ",
+    {
+        params ["_pos", "_unit"];
+
+    }
+] call Ares_fnc_RegisterCustomModule;
+#endif
+
+/*
+ * Util
+ */
+
+[
+    "A3MT - Util",
+    "[P] Curator - Add",
+    {
+        params ["_pos", "_unit"];
+
+        private _radius = [
+            "Add objects to Curator / Zeus",
+            "" call A3MT_fnc_aresStdDistances
+        ] call A3MT_fnc_aresDialog;
+
+        private _toadd = (_pos nearObjects _radius)
+                       + (_pos nearSupplies _radius);
+
+        private _curator = getAssignedCuratorLogic player;
+        _curator addCuratorEditableObjects [_toadd, true];
+    }
+] call Ares_fnc_RegisterCustomModule;
+[
+    "A3MT - Util",
+    "[P] Curator - Remove",
+    {
+        params ["_pos", "_unit"];
+
+        private _radius = [
+            "Remove objects from Curator / Zeus",
+            "" call A3MT_fnc_aresStdDistances
+        ] call A3MT_fnc_aresDialog;
+
+        private _toadd = (_pos nearObjects _radius)
+                       + (_pos nearSupplies _radius);
+
+        private _curator = getAssignedCuratorLogic player;
+        _curator removeCuratorEditableObjects [_toadd, true];
+    }
+] call Ares_fnc_RegisterCustomModule;
+
+[
+    "A3MT - Util",
+    "[U] Immortal - On",
+    {
+        [{ _this allowDamage false }, _this] call A3MT_fnc_aresForUnits;
+    }
+] call Ares_fnc_RegisterCustomModule;
+[
+    "A3MT - Util",
+    "[U] Immortal - Off",
+    {
+        [{ _this allowDamage true }, _this] call A3MT_fnc_aresForUnits;
+    }
+] call Ares_fnc_RegisterCustomModule;
+
+[
+    "A3MT - Util",
+    "[G] Transfer To Server",
+    {
+        [{ _this setGroupOwner 2; }, _this] call A3MT_fnc_aresForGroups;
+    }
+] call Ares_fnc_RegisterCustomModule;
