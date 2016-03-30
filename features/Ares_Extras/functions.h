@@ -4,5 +4,6 @@ class Ares_Extras
     class aresDialog;
     class aresForGroups;
     class aresForUnits;
+    class aresSelection;
     class aresStdDistances;
 };
