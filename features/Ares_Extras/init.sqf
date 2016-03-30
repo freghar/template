@@ -36,7 +36,10 @@
             "" call A3MT_fnc_aresStdDistances
         ] call A3MT_fnc_aresDialog;
 
-        [true, _pos, _radius] call A3MT_fnc_hideTerrain;
+        [[_pos, _radius], {
+            params ["_pos", "_radius"];
+            [true, _pos, _radius] call A3MT_fnc_hideTerrain;
+        }] call A3MT_fnc_execServer;
     }
 ] call Ares_fnc_RegisterCustomModule;
 [
@@ -50,7 +53,10 @@
             "" call A3MT_fnc_aresStdDistances
         ] call A3MT_fnc_aresDialog;
 
-        [false, _pos, _radius] call A3MT_fnc_hideTerrain;
+        [[_pos, _radius], {
+            params ["_pos", "_radius"];
+            [false, _pos, _radius] call A3MT_fnc_hideTerrain;
+        }] call A3MT_fnc_execServer;
     }
 ] call Ares_fnc_RegisterCustomModule;
 
@@ -73,7 +79,10 @@
                        + (_pos nearSupplies _radius);
 
         private _curator = getAssignedCuratorLogic player;
-        _curator addCuratorEditableObjects [_toadd, true];
+        [[_curator, _toadd], {
+            params ["_curator", "_units"];
+            _curator addCuratorEditableObjects [_units, true];
+        }] call A3MT_fnc_execServer;
     }
 ] call Ares_fnc_RegisterCustomModule;
 [
@@ -87,11 +96,14 @@
             "" call A3MT_fnc_aresStdDistances
         ] call A3MT_fnc_aresDialog;
 
-        private _toadd = (_pos nearObjects _radius)
+        private _todel = (_pos nearObjects _radius)
                        + (_pos nearSupplies _radius);
 
         private _curator = getAssignedCuratorLogic player;
-        _curator removeCuratorEditableObjects [_toadd, true];
+        [[_curator, _todel], {
+            params ["_curator", "_units"];
+            _curator removeCuratorEditableObjects [_units, true];
+        }] call A3MT_fnc_execServer;
     }
 ] call Ares_fnc_RegisterCustomModule;
 [
@@ -100,7 +112,10 @@
     {
         [{
             private _curator = getAssignedCuratorLogic player;
-            _curator removeCuratorEditableObjects [_this, true];
+            [[_curator, _this], {
+                params ["_curator", "_units"];
+                _curator removeCuratorEditableObjects [_units, true];
+            }] call A3MT_fnc_execServer;
         }, _this] call A3MT_fnc_aresSelection;
     }
 ] call Ares_fnc_RegisterCustomModule;
@@ -124,22 +139,16 @@
     "A3MT - Util",
     "[U] Simulation - On",
     {
-        [{
-            [_this, {
-                { _x enableSimulationGlobal true } forEach _this;
-            }] call A3MT_fnc_execServer;
-        }, _this] call A3MT_fnc_aresSelection;
+        [{ _this enableSimulationGlobal true }, _this]
+            call A3MT_fnc_aresForUnitsServer;
     }
 ] call Ares_fnc_RegisterCustomModule;
 [
     "A3MT - Util",
     "[U] Simulation - Off",
     {
-        [{
-            [_this, {
-                { _x enableSimulationGlobal false } forEach _this;
-            }] call A3MT_fnc_execServer;
-        }, _this] call A3MT_fnc_aresSelection;
+        [{ _this enableSimulationGlobal false }, _this]
+            call A3MT_fnc_aresForUnitsServer;
     }
 ] call Ares_fnc_RegisterCustomModule;
 
