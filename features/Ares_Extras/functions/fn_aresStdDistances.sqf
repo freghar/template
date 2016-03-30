@@ -8,6 +8,7 @@
     _this,
     [
         ["Within radius of 1m", 1],
+        ["Within radius of 5m", 5],
         ["Within radius of 10m", 10],
         ["Within radius of 100m", 100],
         ["Within radius of 500m", 500],
