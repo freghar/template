@@ -10,14 +10,14 @@
     "A3MT - AI",
     "[G] Fleeing - On",
     {
-        [{ _this allowFleeing 1 }, _this] call A3MT_fnc_aresForGroups;
+        [{ _this allowFleeing 1 }, _this] call A3MT_fnc_aresForGroupsMP;
     }
 ] call Ares_fnc_RegisterCustomModule;
 [
     "A3MT - AI",
     "[G] Fleeing - Off",
     {
-        [{ _this allowFleeing 0 }, _this] call A3MT_fnc_aresForGroups;
+        [{ _this allowFleeing 0 }, _this] call A3MT_fnc_aresForGroupsMP;
     }
 ] call Ares_fnc_RegisterCustomModule;
 
@@ -98,10 +98,10 @@
     "A3MT - Util",
     "[U] Curator - Remove",
     {
-        [_this, {
+        [{
             private _curator = getAssignedCuratorLogic player;
             _curator removeCuratorEditableObjects [_this, true];
-        }] call A3MT_fnc_aresSelection;
+        }, _this] call A3MT_fnc_aresSelection;
     }
 ] call Ares_fnc_RegisterCustomModule;
 
@@ -109,14 +109,14 @@
     "A3MT - Util",
     "[U] Immortal - On",
     {
-        [{ _this allowDamage false }, _this] call A3MT_fnc_aresForUnits;
+        [{ _this allowDamage false }, _this] call A3MT_fnc_aresForUnitsMP;
     }
 ] call Ares_fnc_RegisterCustomModule;
 [
     "A3MT - Util",
     "[U] Immortal - Off",
     {
-        [{ _this allowDamage true }, _this] call A3MT_fnc_aresForUnits;
+        [{ _this allowDamage true }, _this] call A3MT_fnc_aresForUnitsMP;
     }
 ] call Ares_fnc_RegisterCustomModule;
 
@@ -124,14 +124,22 @@
     "A3MT - Util",
     "[U] Simulation - On",
     {
-        [{ _this enableSimulation true; }, _this] call A3MT_fnc_aresForUnits;
+        [{
+            [_this, {
+                { _x enableSimulationGlobal true } forEach _this;
+            }] call A3MT_fnc_execServer;
+        }, _this] call A3MT_fnc_aresSelection;
     }
 ] call Ares_fnc_RegisterCustomModule;
 [
     "A3MT - Util",
     "[U] Simulation - Off",
     {
-        [{ _this enableSimulation false; }, _this] call A3MT_fnc_aresForUnits;
+        [{
+            [_this, {
+                { _x enableSimulationGlobal false } forEach _this;
+            }] call A3MT_fnc_execServer;
+        }, _this] call A3MT_fnc_aresSelection;
     }
 ] call Ares_fnc_RegisterCustomModule;
 
@@ -139,6 +147,6 @@
     "A3MT - Util",
     "[G] Transfer To Server",
     {
-        [{ _this setGroupOwner 2; }, _this] call A3MT_fnc_aresForGroups;
+        [{ _this setGroupOwner 2; }, _this] call A3MT_fnc_aresForGroupsMP;
     }
 ] call Ares_fnc_RegisterCustomModule;
