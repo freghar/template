@@ -17,5 +17,5 @@
         ["Within radius of 10km", 10000],
         ["Within radius of 100km", 100000]
     ],
-    2
+    3
 ];
