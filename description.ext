@@ -6,3 +6,5 @@ class CfgFunctions
 #include "features\functions.h"
     };
 };
+
+#include "features\extended_handlers.h"
