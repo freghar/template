@@ -22,19 +22,37 @@
 ] call Ares_fnc_RegisterCustomModule;
 
 /*
- * Caching
+ * Environment
  */
 
-#ifdef undefined
 [
-    "A3MT - Caching",
-    "[G] ",
+    "A3MT - Environment",
+    "[P] Terrain Objects - Hide",
     {
         params ["_pos", "_unit"];
 
+        private _radius = [
+            "Hide terrain objects",
+            "" call A3MT_fnc_aresStdDistances
+        ] call A3MT_fnc_aresDialog;
+
+        [true, _pos, _radius] call A3MT_fnc_hideTerrain;
     }
 ] call Ares_fnc_RegisterCustomModule;
-#endif
+[
+    "A3MT - Environment",
+    "[P] Terrain Objects - Show",
+    {
+        params ["_pos", "_unit"];
+
+        private _radius = [
+            "Hide terrain objects",
+            "" call A3MT_fnc_aresStdDistances
+        ] call A3MT_fnc_aresDialog;
+
+        [false, _pos, _radius] call A3MT_fnc_hideTerrain;
+    }
+] call Ares_fnc_RegisterCustomModule;
 
 /*
  * Util
@@ -99,6 +117,21 @@
     "[U] Immortal - Off",
     {
         [{ _this allowDamage true }, _this] call A3MT_fnc_aresForUnits;
+    }
+] call Ares_fnc_RegisterCustomModule;
+
+[
+    "A3MT - Util",
+    "[U] Simulation - On",
+    {
+        [{ _this enableSimulation true; }, _this] call A3MT_fnc_aresForUnits;
+    }
+] call Ares_fnc_RegisterCustomModule;
+[
+    "A3MT - Util",
+    "[U] Simulation - Off",
+    {
+        [{ _this enableSimulation false; }, _this] call A3MT_fnc_aresForUnits;
     }
 ] call Ares_fnc_RegisterCustomModule;
 
