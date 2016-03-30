@@ -12,9 +12,9 @@
  *
  * the passed array may be empty if Curator didn't select any objects
  *
- * if '_code' is an ARRAY (not CODE), its first member should be CODE and the
- * second member is passed as a first argument to the code, with array of
- * objects from this function being passed as second
+ * if '_code' is an ARRAY (not CODE), its first member should be an arbitrary
+ * argument, passed as first arg to the second member which should be CODE,
+ * array of objects from this function is passed as second arg
  */
 
 params ["_code", "_ares_args", ["_gfilter", false]];
@@ -24,13 +24,13 @@ _ares_args params ["_pos", "_unit"];
 if (!isNil "_unit" && !isNull _unit) then {
     if (!_gfilter) then {
         if (typeName _code == "ARRAY") then {
-            [(_code select 1), [_unit]] call (_code select 0);
+            [(_code select 0), [_unit]] call (_code select 1);
         } else {
             [_unit] call _code;
         };
     } else {
         if (typeName _code == "ARRAY") then {
-            [(_code select 1), [group _unit]] call (_code select 0);
+            [(_code select 0), [group _unit]] call (_code select 1);
         } else {
             [group _unit] call _code;
         };
@@ -56,7 +56,7 @@ if (!isNil "_unit" && !isNull _unit) then {
         ] call Ares_fnc_ShowZeusMessage;
 
         if (typeName _code == "ARRAY") then {
-            [(_code select 1), _objects] call (_code select 0);
+            [(_code select 0), _objects] call (_code select 1);
         } else {
             _objects call _code;
         };

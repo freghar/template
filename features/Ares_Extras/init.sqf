@@ -98,10 +98,10 @@
     "A3MT - Util",
     "[U] Curator - Remove",
     {
-        [{
+        [_this, {
             private _curator = getAssignedCuratorLogic player;
             _curator removeCuratorEditableObjects [_this, true];
-        }, _this] call A3MT_fnc_aresSelection;
+        }] call A3MT_fnc_aresSelection;
     }
 ] call Ares_fnc_RegisterCustomModule;
 
