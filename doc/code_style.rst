@@ -147,6 +147,8 @@ Scripting commands and BIS functions
 
 - use 'param' instead of BIS_fnc_param
 
+  - for multiple parameters, use 'params'
+
 Rationale:
 Newer code has no reason to use deprecated BIS functions if a faster scripting
 command was created to do the same or similar job.
@@ -156,9 +158,11 @@ out there, don't presume BIS functions are optimized.
 Other
 -----
 
-- don't check argument correctness in functions
+- don't do runtime checks of argument correctness in functions
 
   - it's the function user's responsibility to meet the function's API
+  - however you *can* perform basic data type checking built into the 'param'
+    or 'params' scripting commands as this is virtually overhead-free
 
 
 Generic principles
