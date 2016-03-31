@@ -38,7 +38,9 @@
 
         [[_pos, _radius], {
             params ["_pos", "_radius"];
-            [true, _pos, _radius] call A3MT_fnc_hideTerrain;
+            {
+                _x hideObjectGlobal true;
+            } count nearestTerrainObjects [_pos, [], _radius];
         }] call A3MT_fnc_execServer;
     }
 ] call Ares_fnc_RegisterCustomModule;
@@ -55,7 +57,9 @@
 
         [[_pos, _radius], {
             params ["_pos", "_radius"];
-            [false, _pos, _radius] call A3MT_fnc_hideTerrain;
+            {
+                _x hideObjectGlobal false;
+            } count nearestTerrainObjects [_pos, [], _radius];
         }] call A3MT_fnc_execServer;
     }
 ] call Ares_fnc_RegisterCustomModule;

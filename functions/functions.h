@@ -5,7 +5,6 @@ class AI
 };
 class Environment
 {
-    class hideTerrain;
     class streetLights;
 };
 class Humor
@@ -21,4 +20,8 @@ class Multiplayer
     class execAll;
     class execClients;
     class execServer;
+};
+class Triggers
+{
+    class triggerHideTerrain;
 };
