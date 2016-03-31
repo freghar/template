@@ -1,10 +1,11 @@
 /*
- * hide terrain objects in a perfectly circular '_trigger' area,
+ * hide terrain objects in a perfectly circular trigger area, with trigger
+ * being defined by a 'thisTrigger' global variable (not passed),
  * optionally limited by a '_filter', specified as an array of object names
  *
  * use in 'On Activation' trigger field as ie.
- *   thisTrigger call A3MT_fnc_triggerHideTerrain;
- *   [thisTrigger, ["obj1", "obj2"]] call A3MT_fnc_triggerHideTerrain;
+ *   call A3MT_fnc_triggerHideTerrain;
+ *   ["tree", "bush"] call A3MT_fnc_triggerHideTerrain;
  *
  * list of known filter names (strings), full list unknown:
  *   bunker, bush, busstop, chapel, church, command, cross, fence, fortress,
@@ -13,7 +14,11 @@
  *   viewtower, wall
  */
 
-params ["_trigger", ["_filter", [], [[]]]];
+private _trigger = thisTrigger;
+private _filter = [];
+if (!isNil "_this") then {
+    _filter = _this;
+};
 
 (triggerArea _trigger) params ["_rx", "_ry", "_angle", "_rectangle"];
 
