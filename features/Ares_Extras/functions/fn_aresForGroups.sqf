@@ -1,6 +1,5 @@
 /*
  * call '_code' for each Curator-selected group, passing the group as arg,
- * the execution is guaranteed to run only where each group is local
  */
 
 params ["_code", "_ares_args"];
@@ -11,7 +10,11 @@ params ["_code", "_ares_args"];
         {
             params ["_code", "_groups"];
             {
-                _x call _code;
+                if (typeName _code == "ARRAY") then {
+                    [(_code select 0), _x] call (_code select 1);
+                } else {
+                    _x call _code;
+                };
             } forEach _groups;
         }
     ],

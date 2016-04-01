@@ -10,7 +10,11 @@ params ["_code", "_ares_args"];
         {
             params ["_code", "_units"];
             {
-                _x call _code;
+                if (typeName _code == "ARRAY") then {
+                    [(_code select 0), _x] call (_code select 1);
+                } else {
+                    _x call _code;
+                };
             } forEach _units;
         }
     ],

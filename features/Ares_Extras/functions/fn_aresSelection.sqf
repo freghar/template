@@ -20,26 +20,27 @@
 params ["_code", "_ares_args", ["_gfilter", false]];
 _ares_args params ["_pos", "_unit"];
 
+private _call_code = {
+    params ["_code", "_objects"];
+    if (typeName _code == "ARRAY") then {
+        [(_code select 0), _objects] call (_code select 1);
+    } else {
+        _objects call _code;
+    };
+};
+
 /* object selected as Ares _unit, use it */
 if (!isNil "_unit" && !isNull _unit) then {
     if (!_gfilter) then {
-        if (typeName _code == "ARRAY") then {
-            [(_code select 0), [_unit]] call (_code select 1);
-        } else {
-            [_unit] call _code;
-        };
+        [_code, [_unit]] call _call_code;
     } else {
-        if (typeName _code == "ARRAY") then {
-            [(_code select 0), [group _unit]] call (_code select 1);
-        } else {
-            [group _unit] call _code;
-        };
+        [_code, [group _unit]] call _call_code;
     };
 
 /* placed on empty ground, wait for mouse selection */
 } else {
-    0 = [_code, _gfilter] spawn {
-        params ["_code", "_gfilter"];
+    0 = [_code, _gfilter, _call_code] spawn {
+        params ["_code", "_gfilter", "_call_code"];
 
         ["Select objects with mouse."] call Ares_fnc_ShowZeusMessage;
 
@@ -55,10 +56,6 @@ if (!isNil "_unit" && !isNull _unit) then {
             format ["Selected %1 objects.", count _objects]
         ] call Ares_fnc_ShowZeusMessage;
 
-        if (typeName _code == "ARRAY") then {
-            [(_code select 0), _objects] call (_code select 1);
-        } else {
-            _objects call _code;
-        };
+        [_code, _objects] call _call_code;
     };
 };

@@ -12,7 +12,12 @@ params ["_code", "_ares_args"];
         {
             params ["_code", "_units"];
             {
-                [_x, _code] remoteExec ["BIS_fnc_call", _x];
+                if (typeName _code == "ARRAY") then {
+                    [[(_code select 0), _x], (_code select 1)]
+                        remoteExec ["BIS_fnc_call", _x];
+                } else {
+                    [_x, _code] remoteExec ["BIS_fnc_call", _x];
+                };
             } forEach _units;
         }
     ],
