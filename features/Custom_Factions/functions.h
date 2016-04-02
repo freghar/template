@@ -1,11 +1,7 @@
 class Custom_Factions
 {
     file = "features\Custom_Factions\functions";
-
-    class loadGearFromFile;
-    class registerGear;
-
-    class bootstrapGear
+    class factionsLoad
     {
         preInit = 1;
     };

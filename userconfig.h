@@ -17,8 +17,8 @@
 /* - optionally, hide (despawn) corpses on respawn */
 //#define FEAT_ARSENAL_RESPAWN_HIDEBODY
 
-/* use custom loadout scripts exported via arsenal to create custom
- * factions */
+/* use Arsenal-exported loadouts based on unit class name, to create "factions"
+ * Requires: CBA */
 //#define FEAT_CUSTOM_FACTIONS
 
 /* register useful extra functions to the Ares/Zeus interface,
