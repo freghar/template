@@ -125,6 +125,10 @@ Variable / object scope
 - always, if possible, keep variables local to the scope, use 'private'
 
   - the keyword version of 'private' is allowed
+  - unless absolutely necessary, don't use global variables
+
+    - to keep mission-persistent state about an object, use object-scope
+      variables instead, via setVariable / getVariable on the object
 
 - for global function names, use the conventional TAG
 
