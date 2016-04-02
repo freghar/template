@@ -158,6 +158,18 @@
 
 [
     "A3MT - Util",
+    "[U] Teleport",
+    {
+        params ["_pos", "_unit"];
+        [[_pos, {
+            params ["_pos", "_units"];
+            [_units, _pos] call A3MT_fnc_teleport;
+        }], _this] call A3MT_fnc_aresSelection;
+    }
+] call Ares_fnc_RegisterCustomModule;
+
+[
+    "A3MT - Util",
     "[G] Transfer To Server",
     {
         [{ _this setGroupOwner 2; }, _this] call A3MT_fnc_aresForGroupsMP;
