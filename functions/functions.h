@@ -20,6 +20,7 @@ class Multiplayer
     class execAll;
     class execClients;
     class execServer;
+    class teleport;
 };
 class Triggers
 {
