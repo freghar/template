@@ -2,11 +2,11 @@ class Custom_Factions
 {
     file = "features\Custom_Factions\functions";
     
-    class fileExists{
-        recompile = 1;
-    };
+    class loadGearFromFile;
+    class registerGear;
     
-    class loadGearFromFile{
-        recompile = 1;
+    class bootstrapGear
+    {
+        preInit = 1;
     };
 };
