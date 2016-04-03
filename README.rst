@@ -63,6 +63,23 @@ To enable a function, simply uncomment it (remove the //) in userconfig.h.
 Don't forget to check out its README (if it has one) inside a
 features/Feature_Name/ directory.
 
+Trimming down size
+------------------
+
+A template like this is obviously going to have more functionality than you
+need. If you want the extra space back, feel free to remove functions or
+features.
+
+- to remove a function
+
+  - remove its file in functions/Category/
+  - remove its name from functions/functions.h
+
+- to remove a feature
+
+  - make sure it's not enabled in userconfig.h
+  - remove its directory from features/
+
 Other / Development / Contributing
 ----------------------------------
 
