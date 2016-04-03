@@ -53,7 +53,7 @@ if (typeName (_choiceset select 0) != "ARRAY") then {
     _choiceset = [_choiceset];
 };
 
-/* we pass the former to Ares_fnc_AddUnitsToCurator
+/* we pass the former to Ares_fnc_ShowChooseDialog
  * and interpret its return value as the latter */
 private _chset_questions = [];
 private _chset_values = [];
