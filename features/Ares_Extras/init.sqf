@@ -2,6 +2,9 @@
  * register custom modules/functions in Ares
  */
 
+/* don't do anything if this client doesn't have Ares */
+if (isNil "Ares_fnc_RegisterCustomModule") exitWith {};
+
 /*
  * AI
  */
