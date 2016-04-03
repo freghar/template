@@ -17,3 +17,9 @@ call {
 #include "Ares_Extras\init.sqf"
 };
 #endif
+
+#ifdef AI2SERVER
+call {
+#include "AI2Server\init.sqf"
+};
+#endif
