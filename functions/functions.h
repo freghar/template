@@ -6,6 +6,7 @@ class AI
 class Environment
 {
     class streetLights;
+    class campShowOSD;
 };
 class Humor
 {
