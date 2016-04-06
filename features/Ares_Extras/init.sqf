@@ -11,6 +11,15 @@ if (isNil "Ares_fnc_RegisterCustomModule") exitWith {};
 
 [
     "A3MT - AI",
+    "[U] Allow Crew In Immobile",
+    {
+        [{
+            (vehicle _this) allowCrewInImmobile true;
+        }, _this] call A3MT_fnc_aresForUnits;
+    }
+] call Ares_fnc_RegisterCustomModule;
+[
+    "A3MT - AI",
     "[G] Fleeing - On",
     {
         [{ _this allowFleeing 1 }, _this] call A3MT_fnc_aresForGroupsMP;
