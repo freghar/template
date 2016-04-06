@@ -32,6 +32,20 @@ if (isNil "Ares_fnc_RegisterCustomModule") exitWith {};
         [{ _this allowFleeing 0 }, _this] call A3MT_fnc_aresForGroupsMP;
     }
 ] call Ares_fnc_RegisterCustomModule;
+[
+    "A3MT - AI",
+    "[U] Sit Down",
+    {
+        [{
+            if (vehicle _this != _this) exitWith {};
+            if (isPlayer _this) then {
+                _this action ["SITDOWN", _this];
+            } else {
+                _this call A3MT_fnc_sitDown;
+            };
+        }, _this] call A3MT_fnc_aresForUnitsMP;
+    }
+] call Ares_fnc_RegisterCustomModule;
 
 /*
  * Environment
