@@ -7,6 +7,10 @@ class Environment
 {
     class streetLights;
 };
+class Equipment
+{
+    class addRemoveNVGs;
+};
 class Humor
 {
     class goatBack;
