@@ -61,6 +61,7 @@ if (isNil "Ares_fnc_RegisterCustomModule") exitWith {};
             "Hide terrain objects",
             "" call A3MT_fnc_aresStdDistances
         ] call A3MT_fnc_aresDialog;
+        if (isNil "_radius") exitWith {};
 
         [[_pos, _radius], {
             params ["_pos", "_radius"];
@@ -80,6 +81,7 @@ if (isNil "Ares_fnc_RegisterCustomModule") exitWith {};
             "Hide terrain objects",
             "" call A3MT_fnc_aresStdDistances
         ] call A3MT_fnc_aresDialog;
+        if (isNil "_radius") exitWith {};
 
         [[_pos, _radius], {
             params ["_pos", "_radius"];
@@ -87,6 +89,91 @@ if (isNil "Ares_fnc_RegisterCustomModule") exitWith {};
                 _x hideObjectGlobal false;
             } count nearestTerrainObjects [_pos, [], _radius];
         }] call A3MT_fnc_execServer;
+    }
+] call Ares_fnc_RegisterCustomModule;
+
+/*
+ * Equipment
+ */
+
+[
+    "A3MT - Equipment",
+    "[U] Flashlights/lasers",
+    {
+        private _reply = [
+            "Modify weapon fleshlights / lasers", [
+                [
+                    "Gun flashlights",
+                    [["Force On","forceOn"],
+                     ["Force Off","forceOff"],
+                     ["Auto","AUTO"]]
+                ], [
+                    "Allow IR lasers",
+                    [["Yes",true], ["No",false]]
+                ], [
+                    "Weapon attachment",
+                    [["Leave unmodified",0],
+                     ["Add flashlights if missing",1],
+                     ["Add IR lasers if missing",2],
+                     ["Force add flashlights",3],
+                     ["Force add IR lasers",4],
+                     ["Force none",5]]
+                ], [
+                    "NV Googles",
+                    [["Depends on attachment",0],
+                     ["Force add",1],
+                     ["Force remove",2],
+                     ["Leave unchanged",3]]
+                ]
+            ]
+        ] call A3MT_fnc_aresDialog;
+        if (isNil "_reply") exitWith {};
+
+        [[_reply, {
+            params ["_reply", "_unit"];
+            _reply params ["_gunlight", "_allowir", "_attach", "_nvg"];
+
+            private _item = "";
+            switch (_attach) do {
+                case 1;
+                case 3: { _item = "acc_flashlight" };
+                case 2;
+                case 4: { _item = "acc_pointer_IR" };
+            };
+            switch (_attach) do {
+                case 1;
+                case 2: {
+                    if (((primaryWeaponItems _unit) select 1) == "") then {
+                         _unit addPrimaryWeaponItem _item;
+                    };
+                };
+                case 3;
+                case 4: { _unit addPrimaryWeaponItem _item };
+                case 5: {
+                    private _rail = (primaryWeaponItems _unit) select 1;
+                    _unit removePrimaryWeaponItem _rail;
+                };
+            };
+            /* buggy, doesn't always work - try repeating it for 3 secs */
+            0 = [_unit, _gunlight, _allowir] spawn {
+                params ["_unit", "_gunlight", "_allowir"];
+                for "_x" from 1 to 30 do {
+                    _unit enableGunLights _gunlight;
+                    _unit enableIRLasers _allowir;
+                    sleep 0.1;
+                };
+            };
+            switch (_nvg) do {
+                case 0: {
+                    switch ((primaryWeaponItems _unit) select 1) do {
+                        case "acc_flashlight": { [_unit, false] call A3MT_fnc_addRemoveNVGs };
+                        case "acc_pointer_IR": { [_unit, true] call A3MT_fnc_addRemoveNVGs };
+                    };
+                };
+                case 1: { [_unit, true] call A3MT_fnc_addRemoveNVGs };
+                case 2: { [_unit, false] call A3MT_fnc_addRemoveNVGs };
+            };
+        }], _this] call A3MT_fnc_aresForUnits;
     }
 ] call Ares_fnc_RegisterCustomModule;
 
@@ -104,6 +191,7 @@ if (isNil "Ares_fnc_RegisterCustomModule") exitWith {};
             "Add objects to Curator / Zeus",
             "" call A3MT_fnc_aresStdDistances
         ] call A3MT_fnc_aresDialog;
+        if (isNil "_radius") exitWith {};
 
         private _toadd = (_pos nearObjects _radius)
                        + (_pos nearSupplies _radius);
@@ -125,6 +213,7 @@ if (isNil "Ares_fnc_RegisterCustomModule") exitWith {};
             "Remove objects from Curator / Zeus",
             "" call A3MT_fnc_aresStdDistances
         ] call A3MT_fnc_aresDialog;
+        if (isNil "_radius") exitWith {};
 
         private _todel = (_pos nearObjects _radius)
                        + (_pos nearSupplies _radius);

@@ -71,7 +71,7 @@ private _chset_values = [];
 private _idxs = [_header, _chset_questions] call Ares_fnc_ShowChooseDialog;
 
 /* reply cancelled */
-if (count _idxs == 0) exitWith { 0 };
+if (count _idxs == 0) exitWith { nil };
 
 /* one question only - return one value */
 if (count _idxs == 1) exitWith {
