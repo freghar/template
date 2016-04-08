@@ -23,3 +23,9 @@ call {
 #include "AI2Server\init.sqf"
 };
 #endif
+
+#ifdef FEAT_FROZEN_START
+call {
+#include "Frozen_Start\init.sqf"
+};
+#endif
