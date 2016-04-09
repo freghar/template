@@ -24,7 +24,11 @@ if (!hasInterface) exitWith {};
                                      false, true, "DefaultAction"];
 
     waitUntil { time > 0 };
-    sleep 30;
+
+    /* players may join during briefing, check after game starts */
+    if (count allPlayers >= FEAT_FROZEN_START) then {
+        sleep 30;
+    };
 
     player removeAction _act;
     player enableSimulation true;

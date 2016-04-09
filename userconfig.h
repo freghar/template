@@ -29,8 +29,9 @@
  * bandwidth and potentially other resources */
 //#define FEAT_AI2SERVER
 
-/* freeze players on mission start / JIP for a few seconds */
-//#define FEAT_FROZEN_START
+/* freeze players on mission start / JIP for a few seconds if there are
+ * at least this many players on the server */
+//#define FEAT_FROZEN_START 8
 
 /*
  * Gameplay style specifics
