@@ -92,6 +92,23 @@ if (isNil "Ares_fnc_RegisterCustomModule") exitWith {};
     }
 ] call Ares_fnc_RegisterCustomModule;
 
+[
+    "A3MT - Environment",
+    "[U] Align to Surface Level",
+    {
+        [{ [_this] call A3MT_fnc_setPosAGLS }, _this]
+            call A3MT_fnc_aresForUnitsMP;
+    }
+] call Ares_fnc_RegisterCustomModule;
+[
+    "A3MT - Environment",
+    "[U] Align to Surface Vector",
+    {
+        [{ _this setVectorUp surfaceNormal position _this }, _this]
+            call A3MT_fnc_aresForUnitsMP;
+    }
+] call Ares_fnc_RegisterCustomModule;
+
 /*
  * Equipment
  */
