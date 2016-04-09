@@ -27,7 +27,7 @@
 
 /* move Curator-spawnd units to __SERVER__ after a short while, saving
  * bandwidth and potentially other resources */
-//#define AI2SERVER
+//#define FEAT_AI2SERVER
 
 /* freeze players on mission start / JIP for a few seconds */
 //#define FEAT_FROZEN_START

@@ -18,7 +18,7 @@ call {
 };
 #endif
 
-#ifdef AI2SERVER
+#ifdef FEAT_AI2SERVER
 call {
 #include "AI2Server\init.sqf"
 };
