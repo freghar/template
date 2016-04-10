@@ -30,4 +30,5 @@ class Multiplayer
 class Triggers
 {
     class triggerHideTerrain;
+    class triggerSafeArea;
 };
