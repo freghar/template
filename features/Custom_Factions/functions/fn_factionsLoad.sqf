@@ -15,6 +15,11 @@ private _gen_load = {
             /* can't succeed with player local check (below) if it's null */
             "if (!isDedicated) then { waitUntil {!isNull player} }; " +
             "if (!local _this) exitWith {}; " +
+#ifdef FEAT_ARSENAL_RESPAWN
+            /* no way to detect if player uses arsenal or not, so disable
+             * faction-based loadout for all players, assume all use it */
+            "if (_this == player) exitWith {}; " +
+#endif
             format [
                 "_this execVM ""features\Custom_Factions\loadouts\%1.sqf""; ",
                 _this
