@@ -2,6 +2,9 @@
  * create a Location based on trigger details, specifying class '_type'
  * explicitly via an argument
  *
+ * also export trigger text, filtered to [a-zA-Z0-9_], as a global variable
+ * for easy references with the "in" operator from scripts
+ *
  * uses trigger properties:
  *   position, size (X,Y), orientation, shape, text
  *
@@ -25,11 +28,18 @@ private _type = _this;
     [_type, (position _trigger), _sizex, _sizey, _orient, _rect, triggerText _trigger],
     {
         params ["_type", "_pos", "_sizex", "_sizey", "_orient", "_rect", "_text"];
+
         private _loc = createLocation [_type, _pos, _sizex, _sizey];
         _loc setText _text;
-        _loc setName _text;  /* for easy references */
+        _loc setName _text;  /* ?? any use? */
         _loc setRectangular _rect;
         _loc setDirection _orient;
+
+        /* too bad vehicleVarName doesn't work on triggers :( */
+        private _varname = [_text] call BIS_fnc_filterString;
+        if (_varname != "") then {
+            missionNamespace setVariable [_varname, _loc];
+        };
     }
 ] remoteExec ["BIS_fnc_call", 0, true];
 
