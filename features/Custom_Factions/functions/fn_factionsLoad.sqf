@@ -21,7 +21,7 @@ private _gen_load = {
             "if (_this == player) exitWith {}; " +
 #endif
             format [
-                "_this execVM ""features\Custom_Factions\loadouts\%1.sqf""; ",
+                "_this execVM ""features\Custom_Factions\loadouts\%1""; ",
                 _this
             ] +
         "}"
@@ -29,8 +29,11 @@ private _gen_load = {
 };
 
 {
-    private _class = _x;
+    _x params ["_class", "_file"];
+    if (isNil "_file") then {
+        _file = format ["%1.sqf", _class];
+    };
     {
-        [_class, _x, _class call _gen_load] call CBA_fnc_addClassEventHandler;
+        [_class, _x, _file call _gen_load] call CBA_fnc_addClassEventHandler;
     } forEach ["init", "respawn"];
 } forEach _classes;

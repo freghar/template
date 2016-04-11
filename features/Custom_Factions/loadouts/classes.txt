@@ -1,29 +1,6 @@
 /*
- * Specify classes for loadouts here - each class specified needs to have
- * a corresponding <classname>.sqf file in this (loadouts) directory
- * with the Arsenal-exported and post-processed loadout (see README.rst).
- *
- * Specify a comma-separated list of strings as classes, do NOT put comma
- * (,) after the last string, ie.
- *
- *   "B_Soldier_F", "B_Soldier_A_F"
- *
- * or separated with new lines, ie.
- *
- *   "B_Solider_F",
- *   "B_Soldier_A_F"
- *
- * You can put comments on empty lines to describe the loadout for humans
- * reading this file after you, ie.
- *
- *   // NATO Rifleman
- *   "B_Solider_F",
- *
- *   // NATO Ammo Bearer
- *   "B_Soldier_A_F"
- *
- * By default, only one example (below) is provided.
+ * See README in the previous directory on how to use this file.
  */
 
-// NATO Rifleman
+// Default example
 "B_Soldier_F"
