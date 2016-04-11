@@ -32,5 +32,4 @@ class Triggers
 {
     class triggerAddLocation;
     class triggerHideTerrain;
-    class triggerSafeArea;
 };
