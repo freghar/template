@@ -19,6 +19,7 @@ class Humor
 class Misc
 {
     class oneChannel;
+    class teamColor;
 };
 class Multiplayer
 {
