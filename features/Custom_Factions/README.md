@@ -32,8 +32,11 @@ Loadout creation
    example using a 'search and replace' functionality in notepad (or your
    favorite text editor)
    - some editors like Notepad++ can do this on multiple files at once
-5. add the class name to `classes.txt` inside the loadouts subfolder (see below)
-6. all done! .. remember to post-process (`this` to `_this`) any newly inserted
+5. remove other unwanted saved changes like face/voice or facewear along with
+   lines removing player-customized one (`removeGoggles`), leaving only the
+   modifications you want to perform
+6. add the class name to `classes.txt` inside the loadouts subfolder (see below)
+7. all done! .. remember to post-process (`this` to `_this`) any newly inserted
    loadouts or loadout updates
 
 Example classes.txt
