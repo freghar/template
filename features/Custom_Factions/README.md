@@ -49,8 +49,9 @@ or separated with new lines, ie.
     "B_Solider_F",
     "B_Soldier_A_F"
 
-You can put comments on empty lines to describe the loadout for humans reading
-this file after you, ie.
+You can put comments (anything starting with `//` will be ignored by the game)
+on empty lines to describe the loadout for humans reading this file after you,
+ie.
 
     // NATO Rifleman
     "B_Solider_F",
@@ -60,7 +61,7 @@ this file after you, ie.
 
 All of the examples above use the class names for file names as well, ie.
 `B_Soldier_F` is taken as `B_Soldier_F.sqf`. You can override it by specifying
-an array, denoted with square brackets, instead of just string
+an array, denoted with square brackets instead of just string,
 
     // NATO Rifleman
     ["B_Soldier_F", "mysoldier.sqf"],
@@ -80,10 +81,13 @@ You can go one step further and create your own (sub-)directory structure within
 
 (again, watch the last comma (,) character - it must not be present).
 
-You can also freely combine both syntax types (both will use the same file)
+You can also freely combine both syntax types (both will use the same file) like
 
     ["B_Soldier_lite_F", "B_Soldier_F.sqf"],
     "B_Soldier_F"
+
+which would make both `B_Soldier_lite_F` and `B_Soldier_F` use
+`B_Soldier_F.sqf`.
 
 Importing back into Arsenal
 ---------------------------

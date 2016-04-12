@@ -1,6 +1,2 @@
-/*
- * See README in the previous directory on how to use this file.
- */
+// See README in the previous directory on how to use this file.
 
-// Default example
-"B_Soldier_F"
