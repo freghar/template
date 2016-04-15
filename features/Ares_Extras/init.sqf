@@ -190,7 +190,7 @@ if (isNil "Ares_fnc_RegisterCustomModule") exitWith {};
                 case 1: { [_unit, true] call A3MT_fnc_addRemoveNVGs };
                 case 2: { [_unit, false] call A3MT_fnc_addRemoveNVGs };
             };
-        }], _this] call A3MT_fnc_aresForUnits;
+        }], _this] call A3MT_fnc_aresForUnitsMP;
     }
 ] call Ares_fnc_RegisterCustomModule;
 
