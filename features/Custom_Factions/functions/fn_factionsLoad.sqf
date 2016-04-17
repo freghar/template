@@ -50,13 +50,12 @@ A3MT_factions_data = [];
 /* call each of the cached class data for a given unit, runtime */
 private _call_classes = {
     0 = (_this select 0) spawn {
-        /* ideally, we would wait for !isNull _this (though that doesn't work),
-         * just wait in case _this == player */
-        if (!isDedicated) then { waitUntil { !isNull player } };
         if (!local _this) exitWith {};
 #ifdef FEAT_ARSENAL_RESPAWN
         /* no way to detect if player uses arsenal or not, so disable
          * faction-based loadout for all players, assume all use it */
+        /* _this is always non-null, but player may be */
+        if (!isDedicated) then { waitUntil { !isNull player } };
         if (_this == player) exitWith {};
 #endif
         { _this call _x } forEach (_this call A3MT_fnc_factionsGetCodes);
