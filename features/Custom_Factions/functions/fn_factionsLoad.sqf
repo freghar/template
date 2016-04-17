@@ -9,10 +9,13 @@ private _classfiles = [
 ];
 
 /* pre-parse class specs in-place for easier iteration later on, so that
- *   "classname"                     ->  ["classname", ["classname.sqf"]]
- *   ["classname"]                   ->  ["classname", ["classname.sqf"]]
- *   ["classname", "file"]           ->  ["classname", ["file"]]
- *   ["classname", "file", "file2"]  ->  ["classname", ["file", "file2"]]
+ * the resulting array consists of 3-member [class, inherit, [codes]],
+ * ie.
+ *   "classname"                -> ["classname", false, [<CODE:classname.sqf>]]
+ *   "classname+"               -> ["classname", true,  [<CODE:classname.sqf>]]
+ *   ["classname"]              -> ["classname", false, [<CODE:classname.sqf>]]
+ *   ["classname", "file"]      -> ["classname", false, [<CODE:file>]]
+ *   ["classname", "f1", "f2"]  -> ["classname", false, [<CODE:f1>, <CODE:f2>]]
  */
 _classfiles = _classfiles apply {
     _x params ["_class"];
@@ -25,46 +28,24 @@ _classfiles = _classfiles apply {
     if (count _files == 0) then {
         _files = [format ["%1.sqf", _class]];
     };
-    [_class, _files];
-};
-
-/* pre-populate the list of classes (indexes) so that addition for a parent
- * class finds each child class specified by the user - otherwise, addition
- * for ie. CAManBase before B_Soldier_F is ever mentioned wouldn't affect
- * B_Soldier_F's code set */
-private _classidx = [];
-private _classdata = [];
-{
-    _x params ["_class"];
-    /* if class doesn't exist in the idx list, add it and init empty data */
-    private _idx = _classidx pushBackUnique _class;
-    if (_idx >= 0) then {
-        _classdata set [_idx, []];
-    };
-} forEach _classfiles;
-
-/* load class data (CODEs) */
-{
-    _x params ["_class", "_files"];
-
-    private _newdata = _files apply {
+    _files = _files apply {
         compile preprocessFileLineNumbers
             format ["features\Custom_Factions\loadouts\%1", _x];
     };
+    /* use for inheritance? */
+    private _inherit = false;
+    if ((_class select [count _class - 1]) == "+") then {
+        _inherit = true;
+        _class = ((_class splitString "+") select 0);
+    };
+    [_class, _inherit, _files];
+};
 
-    /* add compiled CODE to all classes that inherit from _class,
-     * including itself */
-    {
-        if (_x iskindOf _class) then {
-            private _tmp = _classdata select _forEachIndex;
-            { _tmp pushBack _x } forEach _newdata;
-            //_classdata set [_forEachIndex, _tmp];
-        };
-    } forEach _classidx;
-} forEach _classfiles;
-
-A3MT_factions_idx = _classidx;
-A3MT_factions_data = _classdata;
+/* "slow" table, for all classes */
+A3MT_factions_classcodes = _classfiles;
+/* "fast" per-class cache table, filled in dynamically by fn_factionsGetCodes */
+A3MT_factions_idx = [];
+A3MT_factions_data = [];
 
 /* call each of the cached class data for a given unit, runtime */
 private _call_classes = {
@@ -78,11 +59,7 @@ private _call_classes = {
          * faction-based loadout for all players, assume all use it */
         if (_this == player) exitWith {};
 #endif
-        private _idx = A3MT_factions_idx find typeOf _this;
-        if (_idx >= 0) then {
-            private _data = A3MT_factions_data select _idx;
-            { _this call _x } forEach _data;
-        };
+        { _this call _x } forEach (_this call A3MT_fnc_factionsGetCodes);
     };
 };
 
