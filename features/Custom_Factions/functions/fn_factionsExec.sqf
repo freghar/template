@@ -1,8 +1,9 @@
 /*
  * manually execute user-specified '_files' for a given '_unit'
  *
- * !! this function cannot be used for units which match any classes
- * !! in the class-based loadout part, race conditions will occur
+ * execution order of class-based loadouts vs this function is not
+ * guaranteed, one may execute sooner than the other and they may
+ * even interleave (!!!)
  */
 
 params ["_unit"];

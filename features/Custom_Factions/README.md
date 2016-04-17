@@ -9,14 +9,8 @@ exports. Exported loadouts will be applied to units based on their class name.
 For example, if a mission maker places a blufor rifleman with class name of
 `B_soldier_F`, a file `B_soldier_F.sqf` will be used to apply the correct gear.
 
-Alternatively, any inherited class can be used, ie. `CAManBase.sqf` would load
-gear for any soldier on any side.
-
-Files must be placed in the loadouts subfolder folder, see the existing example
-inside (and adjust/remove it according to your needs).
-
 This feature should work with any spawning mechanism - Zeus, Editor, various
-unit-spawning mods, etc. Also works for JIP and loads gear on respawn.
+unit-spawning mods, etc. Also works for JIP and activates on respawn.
 
 Loadout creation
 ----------------
@@ -35,7 +29,7 @@ Loadout creation
 5. remove other unwanted saved changes like face/voice or facewear along with
    lines removing player-customized one (`removeGoggles`), leaving only the
    modifications you want to perform
-6. add the class name to `classes.txt` inside the loadouts subfolder (see below)
+6. add the class name to `classes.txt` inside the "loadouts" subfolder
 7. all done! .. remember to post-process (`this` to `_this`) any newly inserted
    loadouts or loadout updates
 
@@ -49,7 +43,7 @@ after the last string, ie.
 
 or separated with new lines, ie.
 
-    "B_Solider_F",
+    "B_Soldier_F",
     "B_Soldier_A_F"
 
 You can put comments (anything starting with `//` will be ignored by the game)
@@ -57,14 +51,14 @@ on empty lines to describe the loadout for humans reading this file after you,
 ie.
 
     // NATO Rifleman
-    "B_Solider_F",
+    "B_Soldier_F",
 
     // NATO Ammo Bearer
     "B_Soldier_A_F"
 
-All of the examples above use the class names for file names as well, ie.
-`B_Soldier_F` is taken as `B_Soldier_F.sqf`. You can override it by specifying
-an array, denoted with square brackets instead of just string,
+All of the examples above use the class names for file names (inside "loadouts")
+as well, ie. `B_Soldier_F` is taken as `B_Soldier_F.sqf`. You can override it
+by specifying an array, denoted with square brackets, instead of just string,
 
     // NATO Rifleman
     ["B_Soldier_F", "mysoldier.sqf"],
@@ -92,12 +86,94 @@ You can also freely combine both syntax types (both will use the same file) like
 which would make both `B_Soldier_lite_F` and `B_Soldier_F` use
 `B_Soldier_F.sqf`.
 
+Execution order
+---------------
+
+You are guaranteed that the classes and files specified in `classes.txt` will
+always run sequentially, from top to bottom. This means you can have multiple
+files per one class in a race-free way:
+
+    // remove all gear
+    ["B_Soldier_F", "util\clear_soldier.sqf"],
+
+    // add basic NATO gear skeleton
+    ["B_Soldier_F", "NATO\basic_loadout.sqf"],
+
+    // add NVGs (dynamic sqf, adds different for each side)
+    ["B_Soldier_F", "util\add_nvgs.sqf"]
+
+This assumes hand-edited loadouts as pure Arsenal exports remove everything
+the soldier previously had as their first action (look and you'll see).
+
+As an alternative, instead of specifying a class name on multiple lines,
+you can give more than one file per line (in any combination):
+
+    // remove all and add basic NATO gear skeleton
+    ["B_Soldier_F", "util\clear_soldier.sqf", "NATO\basic_loadout.sqf"],
+
+    // add NVGs (dynamic sqf, adds different for each side)
+    ["B_Soldier_F", "util\add_nvgs.sqf"]
+
+In this case, the execution order is the same - files on one line execute
+from left to right in addition to lines in the file executing from top to
+bottom.
+
+Inheritance
+-----------
+
+It is also possible to specify loadout for a parent class, in which case
+all child classes will execute the code. This is denoted by the `+` sign
+in class name:
+
+    // remove all weapons and mags from all soldiers
+    ["CAManBase+", "util\remove_arms.sqf"],
+
+    // add basic NATO gear to Blufor/NATO units
+    ["B_Soldier_base_F+", "NATO\basic_loadout.sqf"],
+
+    // add a pistol to CSAT Riflemen only
+    ["O_Soldier_F", "CSAT\give_pistol.sqf"]
+
+As mentioned before, top-down and left-right execution logic is guaranteed,
+therefore the removal **always** happens before the addition in this example.
+
+The inheritance has to be explicitly requested via `+` because some existing
+soldiers might be inherited by others, ie. A3 `b_survivor_f` is inherited from
+`B_Soldier_F` and implicit inheritance would make both have the same loadout
+whereas explicit one leaves `b_survivor_f` unaffected by default.
+
+Manual gear load
+----------------
+
+The `A3MT_fnc_factionsExec` function can be provided in unit init field to
+be executed specifically on that unit at a mission start. This can be useful
+to ie. use a specific loadout for a given soldier. The function takes variable
+number of files, just like a single line of `classes.txt`:
+
+    [this, "B_Soldier_F.sqf", "util\no_nvgs.sqf"] call A3MT_fnc_factionsExec;
+
+The execution order is, again, guaranteed to be from left to right.
+
+It is **NOT** however guaranteed that this function executes after class-based
+loadout definitions - it may execute after it, before it or even **interleave**
+with it! **DO NOT** run code that conflicts with class-based loadouts via this
+function.
+
+For example - if you remove all + add basic gear via class-based loadouts and
+(at the same time) add additional medic supplies via this function, the medic
+supplies may be added before the 'remove all' commands and may get removed
+as a result!
+
+Only if you perform race-free atomic operations on the unit (actions that
+can potentially run in parallel or interleave) should you use both class-based
+execution and this manual function call at the same time.
+
 Importing back into Arsenal
 ---------------------------
 
 To load a previously set loadout back into the arsenal, you simply need to
 reverse the `this` / `_this` replacement process, so that you're importing
-(into Arsenal) code with 'this' instead of `_this`.
+(into Arsenal) code with `this` instead of `_this`.
 
 Additional notes (Advanced)
 ---------------------------
@@ -105,34 +181,10 @@ Additional notes (Advanced)
 Note that Arsenal exports are essentially SQF scripts that modify the units
 directly. You can therefore choose to re-use only some parts of the loadout
 (ie. not applying face/voice) or add your own extra loadout-unrelated logic
-that should be applied on every soldier matching given class.
+that should be applied on every unit matching given class.
 
-You can also use this approach to define "hierarchical" loadouts by having
-a more generic class (ie. `SoldierWB` or `CAManBase`) with changes you want
-to apply always and more fine-grained details in per-endclass files.
-
-Note though, that you would need to hand-edit the loadouts as all Arsenal
-exports by default remove all previous gear.
-
-Also note that no execution order of the files is guaranteed - if you specify
-loadouts for both `CAManBase` and `B_Soldier_F`, either of them can be executed
-first. Therefore - with this hierarchical approach - you need to be very
-careful to **not** remove items in one file and add in another, you need to
-"replace" loadout pieces within the same file, ie.
-
-- `CAManBase`
-
-  - remove any launcher, add AA launcher
-  - remove pistol, remove pistol ammo, add race starter pistol + ammo
-
-- `B_Soldier_F`
-
-  - remove main weapon, remove its ammo, add new main weapon + ammo
-  - remove all grenades, add 4 frag grenades
-  - remove all smoke shells, add 2 white smoke shells
-
-In other words, the changes must not conflict or affect each other and the
-final result must always fit in the inventory.
-
-You are not guaranteed which file runs first, but you are guaranteed,
-by the Arma engine, that only one file will be running at a time.
+It is therefore possible to use this logic to
+- specify vehicle (land/air/sea) cargo
+- specify ammobox cargo
+- modify behavior of animals (or remove them upon initialization)
+- anything you can think of
