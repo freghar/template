@@ -1,4 +1,4 @@
-#include "..\include\common.h"
+#include "..\userconfig.h"
 
 #ifdef FEAT_HIDE_BODY
 call {

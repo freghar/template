@@ -2,6 +2,8 @@
  * adds init and respawn CBA XEHs to load the gear
  */
 
+#include "..\..\..\userconfig.h"
+
 /* since we include it via preprocessor, all comments or ifdefs/macros
  * are taken care of at preprocessing time */
 private _classfiles = [

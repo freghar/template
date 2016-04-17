@@ -1,4 +1,4 @@
-#include "..\include\common.h"
+#include "..\userconfig.h"
 
 #ifdef FEAT_ARSENAL_RESPAWN
 _this call {
