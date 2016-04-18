@@ -2,6 +2,30 @@
  * adds init and respawn CBA XEHs to load the gear
  */
 
+/*
+ * Algorithm:
+ * The obvious way would be to simply walk the classes.txt line-by-line and
+ * calling the code if the classname matches. Since SQF is abysmally slow when
+ * iterating, this can be really slow for larger classes.txt (100s of lines).
+ *
+ * However any other approach doesn't guarantee execution flow - ie. if we were
+ * to walk BIS_fnc_returnParents and execute files from the oldest parent, it
+ * would get us inheritance exec order, not class.txt order.
+ *
+ * The other extreme case is to walk classes.txt, iterating configClasses (cmd)
+ * and adding the pre-processed files (CODE) into each matching class. There are
+ * approx. 10000 of classes though, eating lots of memory, but also taking ~15ms
+ * per class during preInit, resulting in about 150sec delay.
+ * The runtime cost would be very low though, as each class would know exactly
+ * which CODEs to run, without searching the list and matching classnames.
+ *
+ * We take the middle road - we do the "slow" classes.txt walk for each class
+ * only once and then remember (cache) the result, simply executing the cached
+ * result for a given class next time, with virtually zero overhead.
+ * This allows us to cache only classes which are actually used in the mission
+ * while (almost) getting the speed benefit as if we pre-cached everything.
+ */
+
 #include "..\..\..\userconfig.h"
 
 /* since we include it via preprocessor, all comments or ifdefs/macros
