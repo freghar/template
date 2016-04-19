@@ -15,8 +15,12 @@ if (typeName _this == "ARRAY") then {
 
 /* catch errors before executing anything */
 private _codes = _files apply {
-    compile preprocessFileLineNumbers
-        format ["features\Custom_Factions\loadouts\%1", _x];
+    if (typeName _x != "CODE") then {
+        compile preprocessFileLineNumbers
+            format ["features\Custom_Factions\loadouts\%1", _x];
+    } else {
+        _x
+    };
 };
 
 0 = [_unit, _codes] spawn {

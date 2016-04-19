@@ -86,6 +86,11 @@ You can also freely combine both syntax types (both will use the same file) like
 which would make both `B_Soldier_lite_F` and `B_Soldier_F` use
 `B_Soldier_F.sqf`.
 
+Additionally, you can use code blocks directly instead of file names:
+
+    // remove helmet from NATO Rifleman
+    ["B_Soldier_F", { removeHeadgear _this } ]
+
 Execution order
 ---------------
 
