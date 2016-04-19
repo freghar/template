@@ -36,5 +36,6 @@ class Triggers
 };
 class UI
 {
+    class instaOSD;
     class typeText;
 };
