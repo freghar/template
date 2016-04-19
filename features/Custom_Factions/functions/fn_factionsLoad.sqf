@@ -42,6 +42,7 @@ private _classfiles = [
  *   ["classname"]              -> ["classname", false, [<CODE:classname.sqf>]]
  *   ["classname", "file"]      -> ["classname", false, [<CODE:file>]]
  *   ["classname", "f1", "f2"]  -> ["classname", false, [<CODE:f1>, <CODE:f2>]]
+ *   ["classname", <CODE>]      -> ["classname", false, [<CODE>]]
  */
 _classfiles = _classfiles apply {
     _x params ["_class"];
@@ -55,8 +56,12 @@ _classfiles = _classfiles apply {
         _files = [format ["%1.sqf", _class]];
     };
     _files = _files apply {
-        compile preprocessFileLineNumbers
-            format ["features\Custom_Factions\loadouts\%1", _x];
+        if (typeName _x != "CODE") then {
+            compile preprocessFileLineNumbers
+                format ["features\Custom_Factions\loadouts\%1", _x];
+        } else {
+            _x
+        };
     };
     /* use for inheritance? */
     private _inherit = false;
