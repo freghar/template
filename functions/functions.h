@@ -12,6 +12,7 @@ class Environment
 class Equipment
 {
     class addRemoveNVGs;
+    class gearKeeper;
 };
 class Humor
 {
