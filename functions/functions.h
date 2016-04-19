@@ -33,3 +33,7 @@ class Triggers
     class triggerAddLocation;
     class triggerHideTerrain;
 };
+class UI
+{
+    class typeText;
+};
