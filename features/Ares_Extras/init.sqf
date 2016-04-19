@@ -195,6 +195,21 @@ if (isNil "Ares_fnc_RegisterCustomModule") exitWith {};
 ] call Ares_fnc_RegisterCustomModule;
 
 /*
+ * UI
+ */
+
+[
+    "A3MT - UI",
+    "[U] Show InstaOSD",
+    {
+        [{
+            if (!isPlayer _this || !hasInterface) exitWith {};
+            [] call A3MT_fnc_instaOSD;
+        }, _this] call A3MT_fnc_aresForUnitsMP;
+    }
+] call Ares_fnc_RegisterCustomModule;
+
+/*
  * Util
  */
 
