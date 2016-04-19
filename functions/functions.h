@@ -5,6 +5,7 @@ class AI
 };
 class Environment
 {
+    class nearLocText;
     class streetLights;
     class setPosAGLS;
 };
