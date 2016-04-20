@@ -11,6 +11,8 @@
  * is kept separately and will be synchronized between objects
  */
 
+if (!hasInterface) exitWith {};
+
 private _dosave = {
     A3MT_gearkeeper_inv = getUnitLoadout player;
 
