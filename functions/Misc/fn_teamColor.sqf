@@ -5,6 +5,8 @@
  * USES 'this' GLOBAL VARIABLE, NOT USABLE WHERE 'this' IS UNSET
  */
 
+if (didJIP) exitWith {};
+
 0 = [this, _this] spawn {
     params ["_unit", "_color"];
     waitUntil { !isNull player };
