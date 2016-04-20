@@ -3,8 +3,7 @@
 
 if (isDedicated) exitWith {};
 
-[player, [missionNamespace, "A3MT_arsenal_inv"]] call BIS_fnc_saveInventory;
-
+A3MT_arsenal_respawn_inv = getUnitLoadout player;
 player addEventHandler ["Respawn", {
-    [player, [missionNamespace, "A3MT_arsenal_inv"]] call BIS_fnc_loadInventory;
+    player setUnitLoadout A3MT_arsenal_respawn_inv;
 }];
