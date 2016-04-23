@@ -20,6 +20,24 @@ if (isNil "Ares_fnc_RegisterCustomModule") exitWith {};
 ] call Ares_fnc_RegisterCustomModule;
 [
     "A3MT - AI",
+    "[U] Unload cargo in combat - On",
+    {
+        [{
+            (vehicle _this) setUnloadInCombat [true, false];
+        }, _this] call A3MT_fnc_aresForUnitsMP;
+    }
+] call Ares_fnc_RegisterCustomModule;
+[
+    "A3MT - AI",
+    "[U] Unload cargo in combat - Off",
+    {
+        [{
+            (vehicle _this) setUnloadInCombat [false, false];
+        }, _this] call A3MT_fnc_aresForUnitsMP;
+    }
+] call Ares_fnc_RegisterCustomModule;
+[
+    "A3MT - AI",
     "[G] Fleeing - On",
     {
         [{ _this allowFleeing 1 }, _this] call A3MT_fnc_aresForGroupsMP;
