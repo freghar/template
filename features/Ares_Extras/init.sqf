@@ -18,6 +18,7 @@ if (isNil "Ares_fnc_RegisterCustomModule") exitWith {};
         }, _this] call A3MT_fnc_aresForUnits;
     }
 ] call Ares_fnc_RegisterCustomModule;
+
 [
     "A3MT - AI",
     "[U] Unload cargo in combat - On",
@@ -36,6 +37,7 @@ if (isNil "Ares_fnc_RegisterCustomModule") exitWith {};
         }, _this] call A3MT_fnc_aresForUnitsMP;
     }
 ] call Ares_fnc_RegisterCustomModule;
+
 [
     "A3MT - AI",
     "[G] Fleeing - On",
@@ -50,6 +52,7 @@ if (isNil "Ares_fnc_RegisterCustomModule") exitWith {};
         [{ _this allowFleeing 0 }, _this] call A3MT_fnc_aresForGroupsMP;
     }
 ] call Ares_fnc_RegisterCustomModule;
+
 [
     "A3MT - AI",
     "[U] Sit Down",
@@ -337,6 +340,7 @@ if (isNil "Ares_fnc_RegisterCustomModule") exitWith {};
     "A3MT - Util",
     "[G] Transfer To Server",
     {
-        [{ _this setGroupOwner 2; }, _this] call A3MT_fnc_aresForGroupsMP;
+        [{ _this setGroupOwner 2; }, _this]
+            call A3MT_fnc_aresForGroupsServer;
     }
 ] call Ares_fnc_RegisterCustomModule;
