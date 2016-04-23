@@ -311,16 +311,16 @@ if (isNil "Ares_fnc_RegisterCustomModule") exitWith {};
     "A3MT - Util",
     "[U] Simulation - On",
     {
-        [{ _this enableSimulationGlobal true }, _this]
-            call A3MT_fnc_aresForUnitsServer;
+        [{ _this enableSimulationGlobal true }, _this, 2]
+            call A3MT_fnc_aresForUnitsMP;
     }
 ] call Ares_fnc_RegisterCustomModule;
 [
     "A3MT - Util",
     "[U] Simulation - Off",
     {
-        [{ _this enableSimulationGlobal false }, _this]
-            call A3MT_fnc_aresForUnitsServer;
+        [{ _this enableSimulationGlobal false }, _this, 2]
+            call A3MT_fnc_aresForUnitsMP;
     }
 ] call Ares_fnc_RegisterCustomModule;
 
@@ -340,7 +340,7 @@ if (isNil "Ares_fnc_RegisterCustomModule") exitWith {};
     "A3MT - Util",
     "[G] Transfer To Server",
     {
-        [{ _this setGroupOwner 2; }, _this]
-            call A3MT_fnc_aresForGroupsServer;
+        [{ _this setGroupOwner 2; }, _this, 2]
+            call A3MT_fnc_aresForGroupsMP;
     }
 ] call Ares_fnc_RegisterCustomModule;
