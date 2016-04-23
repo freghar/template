@@ -18,10 +18,13 @@ class Humor
 {
     class goatBack;
 };
+class InitLine
+{
+    class initGroupAttr;
+};
 class Misc
 {
     class oneChannel;
-    class teamColor;
 };
 class Multiplayer
 {
