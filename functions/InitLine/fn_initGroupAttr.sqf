@@ -1,6 +1,10 @@
 /*
  * set unit's group-related properties, "team" (sub-group) color
  * and (if leader) the group name
+ *
+ * example:
+ *   "BLUE" call A3MT_fnc_initGroupAttr;
+ *   ["RED", "A1"] call A3MT_fnc_initGroupAttr;    //on a group leader
  */
 
 if (didJIP) exitWith {};
