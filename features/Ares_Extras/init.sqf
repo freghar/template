@@ -309,6 +309,14 @@ if (isNil "Ares_fnc_RegisterCustomModule") exitWith {};
 
 [
     "A3MT - Util",
+    "[U] Reset anim state",
+    {
+        [{ _this switchMove "" }, _this, 0] call A3MT_fnc_aresForUnitsMP;
+    }
+] call Ares_fnc_RegisterCustomModule;
+
+[
+    "A3MT - Util",
     "[U] Simulation - On",
     {
         [{ _this enableSimulationGlobal true }, _this, 2]
