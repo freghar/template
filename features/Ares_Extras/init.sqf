@@ -21,6 +21,16 @@ if (isNil "Ares_fnc_RegisterCustomModule") exitWith {};
 
 [
     "A3MT - AI",
+    "[G] Force WP behaviour",
+    {
+        [{
+            [_this, currentWaypoint _this] setWaypointForceBehaviour true;
+        }, _this] call A3MT_fnc_aresForGroups;
+    }
+] call Ares_fnc_RegisterCustomModule;
+
+[
+    "A3MT - AI",
     "[U] Unload cargo in combat - On",
     {
         [{
