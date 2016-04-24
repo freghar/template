@@ -9,18 +9,23 @@ params ["_code", "_ares_args", "_clientid"];
 
 [
     [
-        _code,
+        [_code, _clientid],
         {
-            params ["_code", "_groups"];
+            params ["_args", "_groups"];
+            _args params ["_code", "_clientid"];
             {
                 private _where = _x;
                 if (!isNil "_clientid") then {
                     _where = _clientid;
                 };
 
+                /* if a custom arg was given, create a composite [] arg out of
+                 * it and the group in this iteration */
                 if (typeName _code == "ARRAY") then {
-                    [[(_code select 0), _x], (_code select 1)]
-                        remoteExec ["BIS_fnc_call", _where];
+                    _code params ["_codearg", "_code"];
+                    [[_codearg, _x], _code] remoteExec ["BIS_fnc_call", _where];
+
+                /* else simply use the group as arg */
                 } else {
                     [_x, _code] remoteExec ["BIS_fnc_call", _where];
                 };
