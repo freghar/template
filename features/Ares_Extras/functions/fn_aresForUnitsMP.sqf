@@ -7,9 +7,14 @@
 
 params ["_code", "_ares_args", "_clientid"];
 
+private _passed_args = [_code];
+if (!isNil "_clientid") then {
+    _passed_args pushBack _clientid;
+};
+
 [
     [
-        [_code, _clientid],
+        _passed_args,
         {
             params ["_args", "_units"];
             _args params ["_code", "_clientid"];
