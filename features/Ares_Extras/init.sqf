@@ -65,6 +65,18 @@ if (isNil "Ares_fnc_RegisterCustomModule") exitWith {};
 
 [
     "A3MT - AI",
+    "[U] Force vehicle lights",
+    {
+        [{
+            private _veh = vehicle _this;
+            if (!local _veh) exitWith {};
+            _veh call A3MT_fnc_vehLightOn;
+        }, _this] call A3MT_fnc_aresForUnitsMP;
+    }
+] call Ares_fnc_RegisterCustomModule;
+
+[
+    "A3MT - AI",
     "[U] Sit Down",
     {
         [{

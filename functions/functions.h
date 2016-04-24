@@ -2,6 +2,7 @@ class AI
 {
     class haulAss;
     class sitDown;
+    class vehLightOn;
 };
 class Environment
 {
