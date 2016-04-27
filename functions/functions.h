@@ -3,6 +3,8 @@ class AI
     class haulAss;
     class sitDown;
     class vehLightOn;
+    class holsterPistolOn;
+    class holsterPistolOff;
 };
 class Environment
 {
