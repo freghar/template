@@ -91,11 +91,6 @@ private _call_classes = {
 #endif
         { _this call _x } forEach (_this call A3MT_fnc_factionsGetCodes);
 
-        /* load any per-unit gear if available */
-        private _perunit = _this getVariable "A3MT_factionsPerUnitCodes";
-        if (!isNil "_perunit") then {
-            { _this call _x } forEach _perunit;
-        };
         /* not public, save traffic, see fn_factionsAppend for details */
         _this setVariable ["A3MT_factionsLoaded", true];
     };
