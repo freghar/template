@@ -113,6 +113,6 @@ private _codes = _files apply {
         { _unit call _x } forEach _codes;
 
         /* executed by factionsLoad / _call_classes next time, on respawn */
-        _this setVariable ["A3MT_factionsPerUnitCodes", _codes, true];
+        _unit setVariable ["A3MT_factionsPerUnitCodes", _codes, true];
     };
 };
