@@ -173,6 +173,23 @@ Only if you perform race-free atomic operations on the unit (actions that
 can potentially run in parallel or interleave) should you use both class-based
 execution and this manual function call at the same time.
 
+Per-unit loadout additions
+--------------------------
+
+As `A3MT_fnc_factionsExec` ignores any existing class-based loadouts, to add
+per-unit customizations that are guaranteed to run **after** the class-based
+CODEs (on each unit initialization and respawn), use `A3MT_fnc_factionsAppend`.
+
+This is useful if you want to have more "roles" than available classes and
+don't want to result to using init lines for everybody.
+
+One example being specialized teams of gunners + ammo bearers, you could have
+20 such pairs, each using a different weapon + bag of ammo for it, with just
+2 classes used.
+Another example could be removing all default gear from all vehicles and adding
+custom one to specific editor-placed vehicles (something not possible via
+`A3MT_fnc_factionsExec` as there would be a removal vs addition race).
+
 Importing back into Arsenal
 ---------------------------
 

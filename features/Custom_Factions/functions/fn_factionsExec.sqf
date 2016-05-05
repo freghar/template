@@ -5,6 +5,9 @@
  * guaranteed, one may execute sooner than the other and they may
  * even interleave (!!!)
  *
+ * use fn_factionsAppend if you need to add per-unit customizations
+ * to class-based loadouts
+ *
  * examples:
  *   "file.sqf" call A3MT_fnc_factionsExec;                  //on init line
  *   ["file1.sqf", "file2.sqf"] call A3MT_fnc_factionsExec;  //on init line

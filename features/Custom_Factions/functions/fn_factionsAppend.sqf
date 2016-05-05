@@ -10,12 +10,6 @@
  * function do nothing - you can only append one set of files, once, for each
  * unit
  *
- * to not add overhead to the more generic case of units without per-unit
- * customization, this function should be called ONLY on the client the '_unit'
- * last respawned on or was created on (is local && faction loadouts were run),
- * typically from a unit init line, otherwise the per-unit loadout will be
- * loaded on next respawn
- *
  * use this function to ie. add per-unit additions to units with loadout
  * otherwise controlled by the class-based loadout script
  *
