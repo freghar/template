@@ -45,6 +45,12 @@ if (typeName _this == "ARRAY") then {
     _files = [_this];
 };
 
+/* sanity check (see below) triggered when player JIPs into existing
+ * AI unit, without respawn - the CODEs have been hooked into class-based
+ * loadout script and are already being executed on respawn */
+private _unit_codes = _unit getVariable "A3MT_factionsPerUnitCodes";
+if (!isNil "_unit_codes") exitWith {};
+
 /* to guarantee execution order on unit init *and* respawn, we need to somehow
  * detect, from class-based loading script, if the unit has defined init line
  * adding per-unit gear - this, however, is not possible as we cannot possibly
@@ -97,43 +103,16 @@ private _codes = _files apply {
     if (_unit == player) exitWith {};
 #endif
 
-    /* wait for class-based loadout loading to finish and delete
-     * the lock variable, so that respawns don't wait forever (below) */
+    /* wait for class-based loadout loading to finish */
     waitUntil {
         if (isNull _unit) exitWith { true };
         _unit getVariable "A3MT_factionsLoaded";
     };
-    _unit setVariable ["A3MT_factionsLoaded", nil];
-    if (isNull _unit) exitWith {};
 
-    /* execute all CODEs now and store them for respawn (only locally) */
-    { _unit call _x } forEach _codes;
-    _unit setVariable ["A3MT_factionsPerUnitCodes", _codes];
+    if (!isNull _unit) then {
+        { _unit call _x } forEach _codes;
 
-    /* note that we don't set up respawn *before* we're done waiting (above),
-     * this is because of a rare case when JIP player takes over existing AI
-     * unit and where (this) per-unit loadout function is on the init line
-     * - it gets executed on JIP, but as the previous unit owner did both
-     *   per-class and per-unit and deleted A3MT_factionsLoaded, we're stuck
-     *   waiting above - if we added respawn handler before that, we would have
-     *   two per-unit CODE sets racing each other as, on respawn,
-     *   - the one from the init line would unlock
-     *   - a new one would be spawned because of the respawn EH
-     * therefore we don't add the respawn EH before the init-line call finishes
-     * (which is the waitUntil above) */
-
-    /* set up next respawn */
-    _unit addEventHandler ["respawn", {
-        0 = _this spawn {
-            params ["_unit", "_corpse"];
-            waitUntil {
-                if (isNull _unit) exitWith { true };
-                _unit getVariable "A3MT_factionsLoaded";
-            };
-            _unit setVariable ["A3MT_factionsLoaded", nil];
-            if (isNull _unit) exitWith {};
-            private _codes = _unit getVariable "A3MT_factionsPerUnitCodes";
-            { _unit call _x } forEach _codes;
-        };
-    }];
+        /* executed by factionsLoad / _call_classes next time, on respawn */
+        _this setVariable ["A3MT_factionsPerUnitCodes", _codes, true];
+    };
 };
