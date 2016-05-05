@@ -97,7 +97,7 @@ private _call_classes = {
             { _this call _x } forEach _perunit;
         };
         /* not public, save traffic, see fn_factionsAppend for details */
-        _this setVariable ["A3MT_factionsLoaded", true];
+        _this setVariable ["A3MT_factionsLoaded", true, true];
     };
 };
 
