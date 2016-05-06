@@ -35,10 +35,10 @@ class Multiplayer
     class execServer;
     class teleport;
 };
-class Triggers
+class LogicTriggers
 {
+    class logicHideTerrain;
     class triggerAddLocation;
-    class triggerHideTerrain;
 };
 class UI
 {
