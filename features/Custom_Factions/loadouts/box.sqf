@@ -1,0 +1,1 @@
+_this addItemCargoGlobal ["acc_flashlight", 3];
