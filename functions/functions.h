@@ -25,6 +25,7 @@ class InitLine
     class initAddLocation;
     class initGroupAttr;
     class initHideTerrain;
+    class initSimpleObject;
 };
 class Misc
 {
