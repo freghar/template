@@ -12,8 +12,8 @@ For example, if a mission maker places a blufor rifleman with class name of
 This feature should work with any spawning mechanism - Zeus, Editor, various
 unit-spawning mods, etc. Also works for JIP and activates on respawn.
 
-Loadout creation
-----------------
+Loadout creation - Arsenal Export
+---------------------------------
 
 1. prepare the loadout via Arma 3 Arsenal
 2. export it to clipboard using the export Arsenal feature - bottom right
@@ -22,15 +22,15 @@ Loadout creation
    subfolder (which is located right next to this README)
    - class name can be found when hovering over the unit in the Eden editor
      or in the top right corner of the (old) 2D editor
-4. rename all occurences of the word `this` to `_this` inside the file, for
-   example using a 'search and replace' functionality in notepad (or your
-   favorite text editor)
-   - some editors like Notepad++ can do this on multiple files at once
-5. remove other unwanted saved changes like face/voice or facewear along with
-   lines removing player-customized one (`removeGoggles`), leaving only the
-   modifications you want to perform
-6. add the class name to `classes.txt` inside the "loadouts" subfolder
-7. all done! .. remember to post-process (`this` to `_this`) any newly inserted
+4. post-process / edit it
+   - replace all occurences of the word `this` with `_this`
+   - remove player customizations / identity (unless you want an army of clones)
+     - remove any lines with `setFace`, `setSpeaker` or `addGoggles`
+   - adjust some items if the mods you use require it
+     - ie. ACRE2 saves radios as ie. `ACRE_PRC343_ID_1` which is the dynamically
+       assigned radio, you need to rename it to `ACRE_PRC343`
+5. add the class name to `classes.txt` inside the "loadouts" subfolder
+6. all done! .. remember to post-process (`this` to `_this`) any newly inserted
    loadouts or loadout updates
 
 Example classes.txt
