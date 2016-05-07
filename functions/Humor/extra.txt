@@ -6,3 +6,7 @@ _this playMove "AbswPercMrunSnonWnonDf";
 
 // make unit appear as if it's talking all the time
 _this setRandomLip true;
+
+// make face expression as if the soldier was dead
+// to cancel, use "neutral"
+_this setMimic "dead";
