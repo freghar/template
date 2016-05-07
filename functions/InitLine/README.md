@@ -25,3 +25,24 @@ complex in a very specific way due to how unit init lines behave.
 
 Taking care of this specific complexity in generic functions would just clutter
 the code, hence this explicit category.
+
+Mission Start-time Logic
+------------------------
+
+Some of these functions are designed to be used on Logic entities to alter
+game environment at a mission start. This happens (preferably) in unscheduled
+environment, eg. before the simulation starts.
+
+Some good practices when making these functions:
+
+- run only on server
+- prefer `*Global` commands, so the effect is visible for JIP-ed clients
+  - if unavailable, use `remoteExec` + add the action into JIP queue manually
+- always delete the initialized unit and any helper units once the intended
+  action has been performed (or script spawned)
+  - this is to save simulation and network overhead
+
+Some of these functions also utilize synchronized Trigger objects as a mission
+creator friendly way of defining areas, shapes, positions, etc. In these cases,
+the triggers are removed during the function logic (see removal mention above)
+and are never run, so their condition is irrelevant.

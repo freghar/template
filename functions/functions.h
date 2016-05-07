@@ -22,7 +22,9 @@ class Humor
 };
 class InitLine
 {
+    class initAddLocation;
     class initGroupAttr;
+    class initHideTerrain;
 };
 class Misc
 {
@@ -34,11 +36,6 @@ class Multiplayer
     class execClients;
     class execServer;
     class teleport;
-};
-class LogicTriggers
-{
-    class logicHideTerrain;
-    class triggerAddLocation;
 };
 class UI
 {
