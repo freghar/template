@@ -91,6 +91,12 @@ private _codes = _files apply {
 0 = [_unit, _codes] spawn {
     params ["_unit", "_codes"];
 
+#ifdef FEAT_ARSENAL_RESPAWN
+    /* see fn_factionsLoad for details */
+    if (!isDedicated) then { waitUntil { !isNull player } };
+    if (_unit == player) exitWith {};
+#endif
+
     /* wait for class-based loadout loading to finish */
     waitUntil {
         if (isNull _unit) exitWith { true };

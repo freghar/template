@@ -80,17 +80,25 @@ A3MT_factions_data = [];
 
 /* call each of the cached class data for a given unit, runtime */
 private _call_classes = {
-    params ["_unit"];  // CBA passes more, ignore them
+    0 = (_this select 0) spawn {
+        if (!local _this) exitWith {};
+#ifdef FEAT_ARSENAL_RESPAWN
+        /* no way to detect if player uses arsenal or not, so disable
+         * faction-based loadout for all players, assume all use it */
+        /* _this is always non-null, but player may be */
+        if (!isDedicated) then { waitUntil { !isNull player } };
+        if (_this == player) exitWith {};
+#endif
+        { _this call _x } forEach (_this call A3MT_fnc_factionsGetCodes);
 
-    if (!local _unit) exitWith {};
-    { _unit call _x } forEach (_unit call A3MT_fnc_factionsGetCodes);
-
-    /* load any per-unit gear if available */
-    private _perunit = _unit getVariable "A3MT_factionsPerUnitCodes";
-    if (!isNil "_perunit") then {
-        { _unit call _x } forEach _perunit;
+        /* load any per-unit gear if available */
+        private _perunit = _this getVariable "A3MT_factionsPerUnitCodes";
+        if (!isNil "_perunit") then {
+            { _this call _x } forEach _perunit;
+        };
+        /* not public, save traffic, see fn_factionsAppend for details */
+        _this setVariable ["A3MT_factionsLoaded", true, true];
     };
-    _unit setVariable ["A3MT_factionsLoaded", true, true];
 };
 
 /* hook event handlers */
