@@ -23,6 +23,7 @@ class Humor
 class InitLine
 {
     class initAddLocation;
+    class initAndRespawn;
     class initGroupAttr;
     class initHideTerrain;
     class initSimpleObject;
