@@ -22,7 +22,6 @@ if (!isNil "this") then {
     _unit = (_this select 0);
     _this deleteAt 0;
 };
-if (!local _unit) exitWith {};
 
 /* allow both single-file string and multi-file array */
 private "_files";
