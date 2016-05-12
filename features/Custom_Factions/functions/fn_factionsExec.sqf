@@ -41,7 +41,4 @@ private _codes = _files apply {
     };
 };
 
-0 = [_unit, _codes] spawn {
-    params ["_unit", "_codes"];
-    { _unit call _x } forEach _codes;
-};
+{ _unit call _x } forEach _codes;
