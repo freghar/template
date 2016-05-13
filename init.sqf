@@ -32,3 +32,10 @@ if (isServer) then {
         } forEach allGroups;
     };
 };
+
+// nice location text display, after all initialization
+0 = [] spawn {
+    waitUntil { time > 0 };
+    sleep 20;
+    "Template (test)" call A3MT_fnc_instaOSD;
+};

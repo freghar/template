@@ -1,0 +1,6708 @@
+version=52;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=129;
+	class ItemIDProvider
+	{
+		nextID=694;
+	};
+	class MarkerIDProvider
+	{
+		nextID=2;
+	};
+	class LayerIndexProvider
+	{
+		nextID=80;
+	};
+	class Camera
+	{
+		pos[]={9166.583,23.178759,21623.395};
+		dir[]={-0.44062078,-0.59958267,0.6682837};
+		up[]={-0.33014125,0.80019677,0.50071204};
+		aside[]={0.8349486,-4.8265792e-007,0.55052221};
+	};
+};
+binarizationWanted=0;
+addons[]=
+{
+	"A3_Modules_F_Curator_Curator",
+	"A3_Modules_F",
+	"A3_Structures_F_Mil_Cargo",
+	"A3_Structures_F_EPA_Civ_Constructions",
+	"A3_Structures_F_Civ_Lamps",
+	"A3_Structures_F_Mil_Helipads",
+	"A3_Structures_F_Heli_Items_Airport",
+	"A3_Characters_F_Common",
+	"A3_Air_F_Gamma_UAV_01",
+	"A3_Air_F_Gamma_UAV_02",
+	"A3_Weapons_F_Ammoboxes",
+	"RHS_US_A2_AirImport",
+	"MELB",
+	"rhsusf_c_hmmwv",
+	"rhsusf_vehicles",
+	"rhsusf_c_rg33",
+	"cup_misc3_config",
+	"A3_Structures_F_Items_Electronics",
+	"A3_Structures_F_EPC_Items_Electronics",
+	"A3_Structures_F_Heli_Items_Electronics",
+	"cup_misc_e_config",
+	"A3_Characters_F_Bootcamp",
+	"a3_characters_f",
+	"A3_Characters_F_BLUFOR",
+	"mcc_sandbox",
+	"acre_api",
+	"ace_common",
+	"ace_map",
+	"ace_explosives",
+	"ace_map_gestures",
+	"ace_hearing",
+	"ace_respawn",
+	"ace_weather",
+	"ace_zeus",
+	"ace_nametags",
+	"ace_finger",
+	"ace_medical",
+	"ace_medical_menu",
+	"ace_sitting",
+	"ace_captives",
+	"ace_spectator",
+	"ace_rearm",
+	"ace_repair",
+	"ace_nightvision",
+	"rhsusf_c_fmtv"
+};
+randomSeed=9993637;
+class ScenarioData
+{
+	author="Freghar";
+	class Header
+	{
+		gameType="Coop";
+	};
+};
+class Mission
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+	class Entities
+	{
+		items=85;
+		class Item0
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9175.9531,14.954605,21611.762};
+				angles[]={0.013332055,0,0.011995304};
+			};
+			id=36;
+			type="ModuleCurator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="#adminLogged";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleInfo";
+					expression="false";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=3;
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item1
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9176.1494,14.956966,21611.762};
+				angles[]={0.013332055,0,0.011995304};
+			};
+			id=37;
+			type="ModuleCurator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="#adminVoted";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleInfo";
+					expression="false";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=3;
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item2
+		{
+			dataType="Layer";
+			name="Location Specific";
+			state=2;
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={9109.6221,15.562944,21519.721};
+						angles[]={0.033319358,0,0.0079935296};
+					};
+					init="""NameLocal"" call A3MT_fnc_initAddLocation";
+					id=690;
+					type="Logic";
+				};
+				class Item1
+				{
+					dataType="Trigger";
+					position[]={9109.6367,15.560193,21519.807};
+					angle=5.663805;
+					class Attributes
+					{
+						text="CNTO Forward Airbase";
+						sizeA=200;
+						sizeB=100;
+						isRectangle=1;
+					};
+					id=689;
+					type="EmptyDetector";
+				};
+			};
+			id=38;
+			atlOffset=3.1471252e-005;
+		};
+		class Item3
+		{
+			dataType="Layer";
+			name="Structures";
+			state=1;
+			class Entities
+			{
+				items=35;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9169.7158,29.108927,21544.545};
+						angles[]={0,0.9250626,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=18;
+					type="Land_Cargo_Tower_V2_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9140.8662,15.957905,21619.662};
+						angles[]={0,4.7241225,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=146;
+					type="Land_PortableLight_single_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9173.6514,20.522076,21667.004};
+						angles[]={0,2.5708008,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=142;
+					type="Land_LampStreet_F";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9198.2949,16.29369,21591.814};
+						angles[]={0.021328852,5.6441741,0.02399601};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=254;
+					type="Land_HelipadSquare_F";
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9174.1514,16.109169,21573.854};
+						angles[]={0.06656827,5.6441741,0.0053377044};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=255;
+					type="Land_HelipadSquare_F";
+					atlOffset=0.0073184967;
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9151.7363,15.775963,21634.629};
+						angles[]={0,5.6288381,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=400;
+					type="Land_PortableLight_single_F";
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9190.4414,16.125038,21592.941};
+						angles[]={0.049293593,5.6286149,0.035984326};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=351;
+					type="PortableHelipadLight_01_blue_F";
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9197.1309,16.518005,21583.955};
+						angles[]={0.0080009829,5.6286149,0.02666023};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=352;
+					type="PortableHelipadLight_01_blue_F";
+					atlOffset=0.0021076202;
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9199.4746,16.09284,21599.668};
+						angles[]={0.046633169,5.6286149,0.019999012};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=353;
+					type="PortableHelipadLight_01_blue_F";
+					atlOffset=-0.0029592514;
+				};
+				class Item9
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9206.1514,16.526043,21590.658};
+						angles[]={0.031988446,5.6286149,6.2778478};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=354;
+					type="PortableHelipadLight_01_blue_F";
+					atlOffset=-0.0041103363;
+				};
+				class Item10
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9175.3389,15.847983,21581.678};
+						angles[]={0.051953323,5.6286149,0.037316564};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=355;
+					type="PortableHelipadLight_01_blue_F";
+					atlOffset=-0.0016384125;
+				};
+				class Item11
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9182.0176,16.436531,21572.705};
+						angles[]={0.034652505,5.6286149,0.014664836};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=356;
+					type="PortableHelipadLight_01_blue_F";
+				};
+				class Item12
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9172.9932,16.495562,21566.014};
+						angles[]={0.010664274,5.6286149,6.272521};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=357;
+					type="PortableHelipadLight_01_blue_F";
+					atlOffset=-0.0023918152;
+				};
+				class Item13
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9166.3096,15.846978,21574.986};
+						angles[]={0.067895547,5.6286149,0.043971907};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=358;
+					type="PortableHelipadLight_01_blue_F";
+					atlOffset=-0.0025167465;
+				};
+				class Item14
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9294.2559,17.184822,21563.961};
+						angles[]={6.2751846,5.5889792,6.2791886};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=359;
+					type="PortableHelipadLight_01_green_F";
+					atlOffset=-0.00052070618;
+				};
+				class Item15
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9239.4844,16.783251,21526.23};
+						angles[]={6.2805333,5.7081132,0.0013372133};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=360;
+					type="PortableHelipadLight_01_green_F";
+					atlOffset=-2.8610229e-005;
+				};
+				class Item16
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9228.6309,16.730967,21514.082};
+						angles[]={6.2818484,5.7081132,0.0013372133};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=361;
+					type="PortableHelipadLight_01_green_F";
+				};
+				class Item17
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9183.5947,16.799776,21483.365};
+						angles[]={0.013332055,5.7081132,0.0066682254};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=362;
+					type="PortableHelipadLight_01_green_F";
+					atlOffset=-1.9073486e-005;
+				};
+				class Item18
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9127.8125,17.43783,21441.441};
+						angles[]={0.027990974,5.7081132,6.2751846};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=363;
+					type="PortableHelipadLight_01_green_F";
+					atlOffset=-4.196167e-005;
+				};
+				class Item19
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9075.6299,17.368769,21402.346};
+						angles[]={6.2805109,5.7081132,0.019996032};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=364;
+					type="PortableHelipadLight_01_green_F";
+					atlOffset=0.002532959;
+				};
+				class Item20
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9021.9229,18.155809,21360.721};
+						angles[]={0.030656165,5.7081132,6.2818484};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=365;
+					type="PortableHelipadLight_01_green_F";
+					atlOffset=-0.0035762787;
+				};
+				class Item21
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={8998.4639,17.834835,21395.83};
+						angles[]={0.0026520467,5.7081132,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=366;
+					type="PortableHelipadLight_01_green_F";
+					atlOffset=-0.00029182434;
+				};
+				class Item22
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9050.9785,17.152065,21437.037};
+						angles[]={0.019999012,5.7081132,0.025327841};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=367;
+					type="PortableHelipadLight_01_green_F";
+					atlOffset=0.00061988831;
+				};
+				class Item23
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9103.0068,17.210526,21476.133};
+						angles[]={6.2805109,5.7081132,0.042640556};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=368;
+					type="PortableHelipadLight_01_green_F";
+					atlOffset=0.0050582886;
+				};
+				class Item24
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9159.0391,16.616224,21518.01};
+						angles[]={0.021328852,5.7081132,0.0053377044};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=369;
+					type="PortableHelipadLight_01_green_F";
+					atlOffset=-0.0017871857;
+				};
+				class Item25
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9214.5146,16.791159,21560.752};
+						angles[]={6.2791886,5.7081132,0.0080009829};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=370;
+					type="PortableHelipadLight_01_green_F";
+					atlOffset=0.0013389587;
+				};
+				class Item26
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9268.2402,16.874077,21600.924};
+						angles[]={0.038647637,5.7081132,0.0039967569};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=371;
+					type="PortableHelipadLight_01_green_F";
+					atlOffset=-0.0038700104;
+				};
+				class Item27
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9177.6738,34.176956,21542.906};
+						angles[]={0,2.5040438,0};
+					};
+					side="Empty";
+					class Attributes
+					{
+					};
+					id=395;
+					type="PortableHelipadLight_01_red_F";
+					atlOffset=2.4789143;
+				};
+				class Item28
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9169.8574,34.222862,21537.109};
+						angles[]={0,2.5040438,0};
+					};
+					side="Empty";
+					class Attributes
+					{
+					};
+					id=397;
+					type="PortableHelipadLight_01_red_F";
+					atlOffset=2.5248203;
+				};
+				class Item29
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9161.2266,34.125298,21545.02};
+						angles[]={0,2.5040438,0};
+					};
+					side="Empty";
+					class Attributes
+					{
+					};
+					id=398;
+					type="PortableHelipadLight_01_red_F";
+					atlOffset=2.2912235;
+				};
+				class Item30
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9171.583,34.12532,21552.865};
+						angles[]={0,2.5040438,0};
+					};
+					side="Empty";
+					class Attributes
+					{
+					};
+					id=399;
+					type="PortableHelipadLight_01_red_F";
+					atlOffset=2.2912445;
+				};
+				class Item31
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9128.6377,34.33572,21616.438};
+						angles[]={0,2.5040438,0};
+					};
+					side="Empty";
+					class Attributes
+					{
+					};
+					id=409;
+					type="PortableHelipadLight_01_red_F";
+					atlOffset=19.13575;
+				};
+				class Item32
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9101.9395,15.723529,21608.123};
+						angles[]={0,5.6645975,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=403;
+					type="Land_PortableLight_double_F";
+				};
+				class Item33
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9113.5693,14.696579,21605.123};
+						angles[]={0.015998369,5.6441741,0.017329043};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=264;
+					type="Land_HelipadCircle_F";
+				};
+				class Item34
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9101.2666,14.883096,21595.703};
+						angles[]={0.0053265258,5.6441741,0.010664274};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=265;
+					type="Land_HelipadCircle_F";
+				};
+			};
+			id=52;
+			atlOffset=2.3019371;
+		};
+		class Item4
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9171.4385,36.713642,21545.311};
+						angles[]={0,5.6713099,0};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+					};
+					id=186;
+					type="B_UAV_AI";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9171.4385,36.713642,21545.311};
+						angles[]={0,5.6713099,0};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=187;
+					type="B_UAV_AI";
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=2;
+				};
+				class Links
+				{
+					items=2;
+					class Item0
+					{
+						linkID=0;
+						item0=186;
+						item1=185;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=187;
+						item1=185;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=184;
+			atlOffset=2.5247459;
+		};
+		class Item5
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9171.4414,36.858505,21545.264};
+				angles[]={0,5.6713099,0};
+			};
+			side="West";
+			flags=2;
+			class Attributes
+			{
+			};
+			id=185;
+			type="B_UAV_01_F";
+			atlOffset=2.5247459;
+		};
+		class Item6
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9142.4307,16.13529,21518.078};
+						angles[]={0.042640556,2.5045125,0.051953323};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+					};
+					id=198;
+					type="B_UAV_AI";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9142.4307,16.13529,21518.078};
+						angles[]={0.042640556,2.5045125,0.051953323};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=199;
+					type="B_UAV_AI";
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=2;
+				};
+				class Links
+				{
+					items=2;
+					class Item0
+					{
+						linkID=0;
+						item0=198;
+						item1=197;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=199;
+						item1=197;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=196;
+			atlOffset=-0.00057220459;
+		};
+		class Item7
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9142.3848,17.710478,21518.076};
+				angles[]={0.042640556,2.5045125,0.051953323};
+			};
+			side="West";
+			flags=6;
+			class Attributes
+			{
+				ammo=0;
+				textures="Indep";
+			};
+			id=197;
+			type="B_UAV_02_F";
+			atlOffset=-0.00057220459;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item8
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9172.7637,34.395844,21544.609};
+				angles[]={0,4.0368767,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=204;
+			type="Box_NATO_Ammo_F";
+			atlOffset=2.5244274;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[""B_UavTerminal""],[4]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item9
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9174.0693,18.731939,21573.912};
+				angles[]={0.066566855,5.6577988,0.0053407075};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=228;
+			type="RHS_UH60M";
+			atlOffset=-0.0030002594;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item10
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9198.3115,19.844183,21591.775};
+				angles[]={0.021327924,5.639822,0.023998277};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				textures="standard";
+			};
+			id=249;
+			type="RHS_CH_47F";
+			atlOffset=-0.0030002594;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item11
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9113.5527,16.634193,21605.254};
+				angles[]={0.016004669,2.5095916,0.01733112};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=257;
+			type="MELB_MH6M";
+			atlOffset=-0.0019989014;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item12
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9101.2627,16.824486,21595.736};
+				angles[]={0.0053232545,2.5102723,0.010663962};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=267;
+			type="MELB_AH6M_M";
+			atlOffset=9.5367432e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item13
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9161.6914,14.507663,21666.016};
+				angles[]={0,2.5638015,0.0012915437};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				textures="standard";
+			};
+			id=275;
+			type="rhsusf_m1025_w_m2";
+			atlOffset=9.5367432e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item14
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9161.3115,14.874331,21640.227};
+				angles[]={0.020001473,0.99003798,6.2791882};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[this, ""NATO\Boxes\scopes.sqf""] call A3MT_fnc_factionsExec";
+			};
+			id=305;
+			type="Box_NATO_Ammo_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item15
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9158.7109,14.506604,21664.102};
+				angles[]={0.0012915437,2.5638015,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				textures="standard";
+			};
+			id=308;
+			type="rhsusf_m1025_w_m2";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item16
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9154.9307,16.425377,21660.951};
+				angles[]={0,2.5638015,6.2818937};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				textures="standard";
+			};
+			id=310;
+			type="rhsusf_m1025_w_mk19";
+			atlOffset=9.5367432e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item17
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9175.2314,16.991585,21672.066};
+				angles[]={0.0039968039,2.5659306,6.2805324};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=318;
+			type="rhsusf_rg33_m2_wd";
+			atlOffset=9.5367432e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item18
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9165.8252,16.337528,21668.057};
+				angles[]={0.0026529003,2.5638015,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				textures="standard";
+			};
+			id=340;
+			type="rhsusf_m998_w_2dr_halftop";
+			atlOffset=9.5367432e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[""rhs_m136_hedp_mag""],[2]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item19
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9168.6367,14.499207,21670.463};
+				angles[]={0.0026529003,2.5638015,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				textures="standard";
+			};
+			id=341;
+			type="rhsusf_m998_w_4dr_halftop";
+			atlOffset=-9.5367432e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[""rhs_m136_hedp_mag""],[2]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item20
+		{
+			dataType="Layer";
+			name="Hiding";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Trigger";
+					position[]={9129.7109,14.777827,21629.063};
+					class Attributes
+					{
+						sizeA=2;
+						sizeB=2;
+					};
+					id=344;
+					type="EmptyDetector";
+				};
+				class Item1
+				{
+					dataType="Trigger";
+					position[]={9150.2148,14.681885,21636.164};
+					class Attributes
+					{
+						sizeA=1;
+						sizeB=1;
+					};
+					id=343;
+					type="EmptyDetector";
+				};
+				class Item2
+				{
+					dataType="Trigger";
+					position[]={9168.1758,14.38895,21671.643};
+					class Attributes
+					{
+						sizeA=1;
+						sizeB=1;
+					};
+					id=298;
+					type="EmptyDetector";
+				};
+				class Item3
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={9169.6182,14.381378,21673.115};
+						angles[]={0.0039967569,0,6.2818484};
+					};
+					init="call A3mt_fnc_initHideTerrain";
+					id=342;
+					type="Logic";
+				};
+			};
+			id=376;
+			atlOffset=0.073886871;
+		};
+		class Item21
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9141.9668,15.100255,21633.918};
+				angles[]={0.012000273,5.7000866,0.0053265258};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=476;
+			type="FoldTable";
+			atlOffset=-9.5367432e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="enableSimulation";
+					expression="if !(is3DEN) then {_this enablesimulation _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item22
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9142.5986,15.654734,21634.35};
+				angles[]={0.012007865,1.1160856,0.0053232545};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				init="this addAction [""VISCOM"", {[true,false] call ace_spectator_fnc_setSpectator; }]";
+			};
+			id=477;
+			type="Land_Laptop_unfolded_F";
+			atlOffset=0.80099297;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="enableSimulation";
+					expression="if !(is3DEN) then {_this enablesimulation _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item23
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9141.3008,15.657317,21633.529};
+				angles[]={0.012007865,3.6212788,0.0053232545};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				init="this addAction [""VISCOM"", {[true,false] call ace_spectator_fnc_setSpectator; }]";
+			};
+			id=479;
+			type="Land_Laptop_device_F";
+			atlOffset=0.79998589;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="enableSimulation";
+					expression="if !(is3DEN) then {_this enablesimulation _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item24
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9141.9648,15.756037,21633.814};
+				angles[]={0.012007865,5.6395254,0.0053232545};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				init="this addAction [""VISCOM"", {[true,false] call ace_spectator_fnc_setSpectator; }]";
+			};
+			id=480;
+			type="Land_PCSet_01_screen_F";
+			atlOffset=0.79997253;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="enableSimulation";
+					expression="if !(is3DEN) then {_this enablesimulation _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item25
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9142.0879,15.511988,21633.645};
+				angles[]={0.012007865,5.6538892,0.0053232545};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=481;
+			type="Land_PCSet_01_keyboard_F";
+			atlOffset=0.80000019;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="enableSimulation";
+					expression="if !(is3DEN) then {_this enablesimulation _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item26
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9142.3838,15.528278,21633.859};
+				angles[]={0.012007865,5.6545177,0.0053232545};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=482;
+			type="Land_PCSet_01_mouse_F";
+			atlOffset=0.80000114;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="enableSimulation";
+					expression="if !(is3DEN) then {_this enablesimulation _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item27
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9141.7539,15.735897,21633.922};
+				angles[]={0.012000273,0.94108075,0.0053265258};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=483;
+			type="Land_PCSet_01_case_F";
+			atlOffset=0.77986908;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="enableSimulation";
+					expression="if !(is3DEN) then {_this enablesimulation _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item28
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9141.4111,15.047279,21634.676};
+				angles[]={0.012007865,2.4690824,0.0053232545};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=484;
+			type="Land_Portable_generator_F";
+			atlOffset=-9.5367432e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="enableSimulation";
+					expression="if !(is3DEN) then {_this enablesimulation _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item29
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9141.1641,15.926669,21633.619};
+				angles[]={0.012000273,5.6180086,0.0053265258};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=486;
+			type="Land_CamoNetVar_EAST_EP1";
+			atlOffset=0.1045599;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="enableSimulation";
+					expression="if !(is3DEN) then {_this enablesimulation _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item30
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9140.1973,18.231499,21635.758};
+				angles[]={0.012000273,3.0712025,0.0053265258};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+			};
+			id=487;
+			type="Land_Antenna";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="enableSimulation";
+					expression="if !(is3DEN) then {_this enablesimulation _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item31
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9153.9521,16.165348,21526.59};
+						angles[]={0.013336525,2.5045125,0.046633169};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+					};
+					id=497;
+					type="B_UAV_AI";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9153.9521,16.165348,21526.59};
+						angles[]={0.013336525,2.5045125,0.046633169};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=498;
+					type="B_UAV_AI";
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=2;
+				};
+				class Links
+				{
+					items=2;
+					class Item0
+					{
+						linkID=0;
+						item0=497;
+						item1=499;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=498;
+						item1=499;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=496;
+		};
+		class Item32
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9153.8789,17.740105,21526.561};
+				angles[]={0.013336525,2.5045125,0.046633169};
+			};
+			side="West";
+			flags=6;
+			class Attributes
+			{
+				ammo=0;
+				textures="Indep";
+			};
+			id=499;
+			type="B_UAV_02_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item33
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9160.1455,15.212181,21647.377};
+				angles[]={0.012821539,5.712532,6.2775331};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[this, ""NATO\Boxes\ammosmall.sqf""] call A3MT_fnc_factionsExec";
+			};
+			id=503;
+			type="Box_NATO_Ammo_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag""],[4,4,4]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item34
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9159.1914,15.340581,21648.965};
+				angles[]={0.013334315,4.1475129,6.2778621};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[this, ""NATO\Boxes\ammomedium.sqf""] call A3MT_fnc_factionsExec";
+			};
+			id=507;
+			type="B_supplyCrate_F";
+			atlOffset=-1.6212463e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag""],[4,4,4]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item35
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9158.1992,15.32631,21650.434};
+				angles[]={0.013332055,4.1475129,6.2778587};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[this, ""NATO\Boxes\ammomedium.sqf""] call A3MT_fnc_factionsExec";
+			};
+			id=508;
+			type="B_supplyCrate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag""],[4,4,4]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item36
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9160.1328,14.661361,21647.377};
+				angles[]={0.013332055,5.712532,6.2778587};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[this, ""NATO\Boxes\ammosmall.sqf""] call A3MT_fnc_factionsExec";
+			};
+			id=509;
+			type="Box_NATO_Ammo_F";
+			atlOffset=-0.086966515;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag""],[4,4,4]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item37
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9160.165,15.762991,21647.373};
+				angles[]={0.012309221,5.712532,6.2772055};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[this, ""NATO\Boxes\ammosmall.sqf""] call A3MT_fnc_factionsExec";
+			};
+			id=510;
+			type="Box_NATO_Ammo_F";
+			atlOffset=0.55086708;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag""],[4,4,4]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item38
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9156.876,20.766129,21637.709};
+						angles[]={0,2.529593,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						rank="COLONEL";
+						init="[nil,""GM""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\GM.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Game Master";
+						isPlayer=1;
+					};
+					id=591;
+					type="B_Protagonist_VR_F";
+					atlOffset=4.5776367e-005;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=590;
+			atlOffset=4.5776367e-005;
+		};
+		class Item39
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9165.3506,14.663243,21635.094};
+						angles[]={0.013332055,2.529593,6.2805333};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						rank="MAJOR";
+						init="[nil,""HQ""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\HQ\Commander.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="HQ Commander";
+						isPlayable=1;
+					};
+					id=593;
+					type="B_Soldier_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9166.6641,14.647055,21636.02};
+						angles[]={0.015998369,2.529593,6.2778587};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="[nil,""HQ""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MainForce\Medic.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="HQ Platoon Medic";
+						isPlayable=1;
+					};
+					id=594;
+					type="B_medic_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9167.9746,14.625238,21636.945};
+						angles[]={0.015998369,2.529593,6.2778587};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="[nil,""HQ""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\HQ\Rifleman.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="HQ Rifleman";
+						isPlayable=1;
+					};
+					id=595;
+					type="B_Soldier_F";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9169.2881,14.601889,21637.863};
+						angles[]={0.021328852,2.529593,6.2778478};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						rank="CAPTAIN";
+						init="[nil,""HQ""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\HQ\Sergeant.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="HQ Sergeant";
+						isPlayable=1;
+					};
+					id=596;
+					type="B_Soldier_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=592;
+		};
+		class Item40
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9155.042,14.750413,21627.646};
+						angles[]={0.0093286335,2.529593,6.2805333};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						rank="LIEUTENANT";
+						init="[nil,""ASL""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MainForce\SL.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Alpha Squad Lead";
+						isPlayable=1;
+					};
+					id=598;
+					type="B_Soldier_F";
+					atlOffset=-9.5367432e-007;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9153.7324,14.763469,21626.73};
+						angles[]={0.0093286335,2.529593,6.2805333};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="[nil,""ASL""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MainForce\Medic.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Alpha Medic";
+						isPlayable=1;
+					};
+					id=599;
+					type="B_medic_F";
+					atlOffset=0.00099945068;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=597;
+			atlOffset=-9.5367432e-007;
+		};
+		class Item41
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9155.1123,14.777686,21624.734};
+						angles[]={0.010664274,5.6711855,6.2791886};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						rank="SERGEANT";
+						init="[""BLUE"",""A1""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MainForce\FTL.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Alpha 1 Fireteam Lead";
+						isPlayable=1;
+					};
+					id=601;
+					type="B_Soldier_F";
+					atlOffset=9.5367432e-007;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9156.418,14.765321,21625.656};
+						angles[]={0.0093286335,5.6711855,6.2805333};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="[""RED"",""A1""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MainForce\AR.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Alpha 1 Automatic Rifleman";
+						isPlayable=1;
+					};
+					id=602;
+					type="B_Soldier_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9157.7275,14.753235,21626.578};
+						angles[]={0.0093286335,5.6711855,6.2805333};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						rank="CORPORAL";
+						init="[""RED"",""A1""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MainForce\AAR.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Alpha 1 Assistant Automatic Rifleman";
+						isPlayable=1;
+					};
+					id=603;
+					type="B_Soldier_F";
+					atlOffset=9.5367432e-007;
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9159.0322,14.741126,21627.502};
+						angles[]={0.0093286335,5.6711855,6.2805333};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="[""BLUE"",""A1""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MainForce\AT.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Alpha 1 Rifleman (AT)";
+						isPlayable=1;
+					};
+					id=604;
+					type="B_Soldier_F";
+					atlOffset=9.5367432e-007;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=600;
+			atlOffset=9.5367432e-007;
+		};
+		class Item42
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9156.3799,14.791778,21622.938};
+						angles[]={0.010664274,5.6711855,6.2791886};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						rank="SERGEANT";
+						init="[""YELLOW"",""A2""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MainForce\FTL.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Alpha 2 Fireteam Lead";
+						isPlayable=1;
+					};
+					id=606;
+					type="B_Soldier_F";
+					atlOffset=9.5367432e-007;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9157.6846,14.778745,21623.857};
+						angles[]={0.0093286335,5.6711855,6.2805333};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="[""GREEN"",""A2""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MainForce\AR.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Alpha 2 Automatic Rifleman";
+						isPlayable=1;
+					};
+					id=607;
+					type="B_Soldier_F";
+					atlOffset=9.5367432e-007;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9158.9951,14.766635,21624.779};
+						angles[]={0.0093286335,5.6711855,6.2805333};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						rank="CORPORAL";
+						init="[""GREEN"",""A2""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MainForce\AAR.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Alpha 2 Assistant Automatic Rifleman";
+						isPlayable=1;
+					};
+					id=608;
+					type="B_Soldier_F";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9160.2998,14.754525,21625.705};
+						angles[]={0.0093286335,5.6711855,6.2805333};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="[""YELLOW"",""A2""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MainForce\AT.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Alpha 2 Rifleman (AT)";
+						isPlayable=1;
+					};
+					id=609;
+					type="B_Soldier_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=605;
+			atlOffset=9.5367432e-007;
+		};
+		class Item43
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9160.7578,14.713068,21631.639};
+						angles[]={0.0080009829,2.529593,0.0013372133};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						rank="LIEUTENANT";
+						init="[nil,""BSL""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MainForce\SL.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Bravo Squad Lead";
+						isPlayable=1;
+					};
+					id=611;
+					type="B_Soldier_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9159.4492,14.718634,21630.725};
+						angles[]={0.0080009829,2.529593,0.0013372133};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="[nil,""BSL""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MainForce\Medic.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Bravo Medic";
+						isPlayable=1;
+					};
+					id=612;
+					type="B_medic_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=610;
+		};
+		class Item44
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9160.8311,14.732826,21628.748};
+						angles[]={0.0053265258,5.6711855,0.0013372133};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						rank="SERGEANT";
+						init="[""BLUE"",""B1""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MainForce\FTL.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Bravo 1 Fireteam Lead";
+						isPlayable=1;
+					};
+					id=614;
+					type="B_Soldier_F";
+					atlOffset=9.5367432e-007;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9162.1367,14.729634,21629.672};
+						angles[]={0.0053265258,5.6711855,0.0013372133};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="[""RED"",""B1""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MainForce\AR.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Bravo 1 Automatic Rifleman";
+						isPlayable=1;
+					};
+					id=615;
+					type="B_Soldier_F";
+					atlOffset=9.5367432e-007;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9163.4463,14.725031,21630.592};
+						angles[]={0.0080009829,5.6711855,0.0013372133};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						rank="CORPORAL";
+						init="[""RED"",""B1""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MainForce\AAR.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Bravo 1 Assistant Automatic Rifleman";
+						isPlayable=1;
+					};
+					id=616;
+					type="B_Soldier_F";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9164.751,14.7369,21631.514};
+						angles[]={0.013332055,5.6711855,6.2791886};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="[""BLUE"",""B1""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MainForce\AT.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Bravo 1 Rifleman (AT)";
+						isPlayable=1;
+					};
+					id=617;
+					type="B_Soldier_F";
+					atlOffset=0.024000168;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=613;
+			atlOffset=9.5367432e-007;
+		};
+		class Item45
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9162.0986,14.744105,21626.949};
+						angles[]={0.0053265258,5.6711855,0.0013372133};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						rank="SERGEANT";
+						init="[""YELLOW"",""B2""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MainForce\FTL.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Bravo 2 Fireteam Lead";
+						isPlayable=1;
+					};
+					id=619;
+					type="B_Soldier_F";
+					atlOffset=9.5367432e-007;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9163.4033,14.740924,21627.873};
+						angles[]={0.0053265258,5.6711855,0.0013372133};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="[""GREEN"",""B2""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MainForce\AR.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Bravo 2 Automatic Rifleman";
+						isPlayable=1;
+					};
+					id=620;
+					type="B_Soldier_F";
+					atlOffset=9.5367432e-007;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9164.7139,14.754759,21628.793};
+						angles[]={0.0053265258,5.6711855,0.0013372133};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						rank="CORPORAL";
+						init="[""GREEN"",""B2""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MainForce\AAR.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Bravo 2 Assistant Automatic Rifleman";
+						isPlayable=1;
+					};
+					id=621;
+					type="B_Soldier_F";
+					atlOffset=0.017001152;
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9166.0186,14.75483,21629.717};
+						angles[]={0.0093286335,5.6711855,6.2805333};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="[""YELLOW"",""B2""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MainForce\AT.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Bravo 2 Rifleman (AT)";
+						isPlayable=1;
+					};
+					id=622;
+					type="B_Soldier_F";
+					atlOffset=0.02299881;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=618;
+			atlOffset=9.5367432e-007;
+		};
+		class Item46
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=3;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9166.8262,14.688166,21632.93};
+						angles[]={0.013332055,5.6711855,6.2805333};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						rank="SERGEANT";
+						init="[nil,""MMG""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MainForce\SL.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="MMG Team Lead";
+						isPlayable=1;
+					};
+					id=624;
+					type="B_Soldier_F";
+					atlOffset=9.5367432e-007;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9168.1377,14.672411,21633.85};
+						angles[]={0.013332055,5.6711855,6.2805333};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="[nil,""MMG""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MMG\Gunner.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="MMG Gunner";
+						isPlayable=1;
+					};
+					id=625;
+					type="B_Soldier_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9169.4434,14.652241,21634.768};
+						angles[]={0.015998369,5.6711855,6.2778587};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="[nil,""MMG""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MMG\Bearer.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="MMG Assistant";
+						isPlayable=1;
+					};
+					id=626;
+					type="B_Soldier_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=623;
+			atlOffset=9.5367432e-007;
+		};
+		class Item47
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=3;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9168.0908,14.70879,21631.131};
+						angles[]={0.013332055,5.6711855,6.2805333};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						rank="SERGEANT";
+						init="[nil,""MAT""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MainForce\SL.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="MAT Team Lead";
+						isPlayable=1;
+					};
+					id=628;
+					type="B_Soldier_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9169.3945,14.693033,21632.051};
+						angles[]={0.013332055,5.6711855,6.2805333};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="[nil,""MAT""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MAT\Gunner.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="MAT Gunner";
+						isPlayable=1;
+					};
+					id=629;
+					type="B_Soldier_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9170.7002,14.674306,21632.971};
+						angles[]={0.015998369,5.6711855,6.2778587};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="[nil,""MAT""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MAT\Bearer.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="MAT Assistant";
+						isPlayable=1;
+					};
+					id=630;
+					type="B_Soldier_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=627;
+		};
+		class Item48
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=3;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9169.3477,14.726561,21629.33};
+						angles[]={0.0093286335,5.6711855,6.2805333};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						rank="SERGEANT";
+						init="[nil,""MTR""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MainForce\SL.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Mortar Team Lead";
+						isPlayable=1;
+					};
+					id=632;
+					type="B_Soldier_F";
+					atlOffset=-9.5367432e-007;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9170.6475,14.713766,21630.246};
+						angles[]={0.013332055,5.6711855,6.2805333};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="[nil,""MTR""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\Mortar\Gunner.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Mortar Gunner";
+						isPlayable=1;
+					};
+					id=633;
+					type="B_Soldier_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9171.9482,14.696625,21631.16};
+						angles[]={0.015998369,5.6711855,6.2778587};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="[nil,""MTR""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\Mortar\Bearer.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Mortar Assistant";
+						isPlayable=1;
+					};
+					id=634;
+					type="B_Soldier_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=631;
+			atlOffset=-9.5367432e-007;
+		};
+		class Item49
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9171.5381,14.618714,21636.166};
+						angles[]={0.015998369,5.6711855,6.2778587};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						rank="LIEUTENANT";
+						init="[nil,""NB1""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\Crew\Pilot.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Nightbird 1 Pilot";
+						isPlayable=1;
+					};
+					id=636;
+					type="B_Soldier_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9172.8438,14.597103,21637.08};
+						angles[]={0.015998369,5.6711855,6.2778587};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="[nil,""NB1""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\Crew\Copilot.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Nightbird 1 Co-pilot";
+						isPlayable=1;
+					};
+					id=637;
+					type="B_engineer_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=635;
+		};
+		class Item50
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9172.8018,14.640717,21634.369};
+						angles[]={0.015998369,5.6711855,6.2778587};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						rank="LIEUTENANT";
+						init="[nil,""NB2""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\Crew\Pilot.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Nightbird 2 Pilot";
+						isPlayable=1;
+					};
+					id=639;
+					type="B_Soldier_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9174.1074,14.619105,21635.285};
+						angles[]={0.015998369,5.6711855,6.2778587};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="[nil,""NB2""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\Crew\Copilot.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Nightbird 2 Co-pilot";
+						isPlayable=1;
+					};
+					id=640;
+					type="B_engineer_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=638;
+		};
+		class Item51
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9174.0693,14.662811,21632.566};
+						angles[]={0.015998369,5.6711855,6.2778587};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						rank="LIEUTENANT";
+						init="[nil,""NB3""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\Crew\Pilot.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Nightbird 3 Pilot";
+						isPlayable=1;
+					};
+					id=642;
+					type="B_Soldier_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9175.375,14.641171,21633.482};
+						angles[]={0.015998369,5.6711855,6.2778587};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="[nil,""NB3""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\Crew\Copilot.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Nightbird 3 Co-pilot";
+						isPlayable=1;
+					};
+					id=643;
+					type="B_engineer_F";
+					atlOffset=9.5367432e-007;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=641;
+		};
+		class Item52
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=3;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9175.5547,14.689344,21630.412};
+						angles[]={0.015998369,5.6711855,6.2778587};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						rank="LIEUTENANT";
+						init="[nil,""DGR1""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\Crew\VehCommander.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Dagger 1 Vehicle Commander";
+						isPlayable=1;
+					};
+					id=645;
+					type="B_Soldier_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9176.8574,14.667719,21631.33};
+						angles[]={0.015998369,5.6711855,6.2778587};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="[nil,""DGR1""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\Crew\VehDriver.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Dagger 1 Vehicle Driver";
+						isPlayable=1;
+					};
+					id=646;
+					type="B_Soldier_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9178.1611,14.646647,21632.242};
+						angles[]={0.014664836,5.6711855,6.2791886};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						rank="CORPORAL";
+						init="[nil,""DGR1""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\Crew\VehGunner.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Dagger 1 Vehicle Gunner";
+						isPlayable=1;
+					};
+					id=647;
+					type="B_Soldier_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=644;
+		};
+		class Item53
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=3;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9176.8193,14.715267,21628.611};
+						angles[]={0.018663859,5.6711855,6.2778478};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						rank="LIEUTENANT";
+						init="[nil,""DGR2""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\Crew\VehCommander.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Dagger 2 Vehicle Commander";
+						isPlayable=1;
+					};
+					id=649;
+					type="B_Soldier_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9178.1221,14.691229,21629.525};
+						angles[]={0.018663859,5.6711855,6.2778478};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="[nil,""DGR2""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\Crew\VehDriver.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Dagger 2 Vehicle Driver";
+						isPlayable=1;
+					};
+					id=650;
+					type="B_Soldier_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9179.4258,14.668289,21630.438};
+						angles[]={0.015998369,5.6711855,6.2778587};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						rank="CORPORAL";
+						init="[nil,""DGR2""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\Crew\VehGunner.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Dagger 2 Vehicle Gunner";
+						isPlayable=1;
+					};
+					id=651;
+					type="B_Soldier_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=648;
+		};
+		class Item54
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=3;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9178.0879,14.742064,21626.813};
+						angles[]={0.018663859,5.6711855,6.2778478};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						rank="LIEUTENANT";
+						init="[nil,""DGR3""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\Crew\VehCommander.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Dagger 3 Vehicle Commander";
+						isPlayable=1;
+					};
+					id=653;
+					type="B_Soldier_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9179.3896,14.718031,21627.729};
+						angles[]={0.018663859,5.6711855,6.2778478};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="[nil,""DGR3""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\Crew\VehDriver.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Dagger 3 Vehicle Driver";
+						isPlayable=1;
+					};
+					id=654;
+					type="B_Soldier_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9180.6943,14.703317,21628.641};
+						angles[]={0.018663859,5.6711855,0.0080009829};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						rank="CORPORAL";
+						init="[nil,""DGR3""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\Crew\VehGunner.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Dagger 3 Vehicle Gunner";
+						isPlayable=1;
+					};
+					id=655;
+					type="B_Soldier_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=652;
+		};
+		class Item55
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9157.6475,14.809843,21621.141};
+						angles[]={0.013332055,5.6711855,6.2805333};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						rank="SERGEANT";
+						init="[""BLUE"",""A3""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MainForce\FTL.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Alpha 3 Fireteam Lead";
+						isPlayable=1;
+					};
+					id=657;
+					type="B_Soldier_F";
+					atlOffset=9.5367432e-007;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9158.9531,14.794033,21622.064};
+						angles[]={0.013332055,5.6711855,6.2805333};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="[""RED"",""A3""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MainForce\AR.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Alpha 3 Automatic Rifleman";
+						isPlayable=1;
+					};
+					id=658;
+					type="B_Soldier_F";
+					atlOffset=9.5367432e-007;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9160.2627,14.780022,21622.984};
+						angles[]={0.0093286335,5.6711855,6.2805333};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						rank="CORPORAL";
+						init="[""RED"",""A3""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MainForce\AAR.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Alpha 3 Assistant Automatic Rifleman";
+						isPlayable=1;
+					};
+					id=659;
+					type="B_Soldier_F";
+					atlOffset=9.5367432e-007;
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9161.5674,14.767928,21623.906};
+						angles[]={0.0093286335,5.6711855,6.2805333};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="[""BLUE"",""A3""] call A3MT_fnc_initGroupAttr; { [_this, ""NATO\MainForce\AT.sqf""] call A3MT_fnc_factionsExec } call A3MT_fnc_initAndRespawn";
+						description="Alpha 3 Rifleman (AT)";
+						isPlayable=1;
+					};
+					id=660;
+					type="B_Soldier_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=656;
+			atlOffset=9.5367432e-007;
+		};
+		class Item56
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9176.7529,14.958836,21612.164};
+				angles[]={0.013332055,0,0.011995304};
+			};
+			id=662;
+			type="mcc_sandbox_moduleGAIASettings";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="mcc_sandbox_moduleGAIASettings_aiSkillSpot";
+					expression="_this setVariable ['aiSkillSpot',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0.40000001;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="mcc_sandbox_moduleGAIASettings_gaiacontrol";
+					expression="_this setVariable ['gaiacontrol',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="mcc_sandbox_moduleGAIASettings_aiSmoke";
+					expression="_this setVariable ['aiSmoke',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="mcc_sandbox_moduleGAIASettings_aiSkillGen";
+					expression="_this setVariable ['aiSkillGen',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0.5;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="mcc_sandbox_moduleGAIASettings_aiSkillCommand";
+					expression="_this setVariable ['aiSkillCommand',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0.60000002;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="mcc_sandbox_moduleGAIASettings_cacheDistance";
+					expression="_this setVariable ['cacheDistance',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1500;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="mcc_sandbox_moduleGAIASettings_aiSkillAim";
+					expression="_this setVariable ['aiSkillAim',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0.30000001;
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="mcc_sandbox_moduleGAIASettings_aiSmokeChance";
+					expression="_this setVariable ['aiSmokeChance',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=8;
+			};
+		};
+		class Item57
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9177.2666,14.965243,21612.146};
+				angles[]={0.013332055,0,0.011995304};
+			};
+			id=663;
+			type="mcc_sandbox_moduleCover";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="mcc_sandbox_moduleCover_survive";
+					expression="_this setVariable ['survive',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="mcc_sandbox_moduleCover_coverRecoil";
+					expression="_this setVariable ['coverRecoil',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="mcc_sandbox_moduleCover_coverUI";
+					expression="_this setVariable ['coverUI',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="mcc_sandbox_moduleCover_interaction";
+					expression="_this setVariable ['interaction',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="mcc_sandbox_moduleCover_cover";
+					expression="_this setVariable ['cover',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="mcc_sandbox_moduleCover_coverVault";
+					expression="_this setVariable ['coverVault',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="mcc_sandbox_moduleCover_switchWeapons";
+					expression="_this setVariable ['switchWeapons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="mcc_sandbox_moduleCover_interactionUI";
+					expression="_this setVariable ['interactionUI',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=8;
+			};
+		};
+		class Item58
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9177,14.961948,21612.154};
+				angles[]={0.013332055,0,0.011995304};
+			};
+			id=664;
+			type="mcc_sandbox_moduleMissionSettings";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="mcc_sandbox_moduleMissionSettings_artilleryComputer";
+					expression="_this setVariable ['artilleryComputer',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="mcc_sandbox_moduleMissionSettings_t2t";
+					expression="_this setVariable ['t2t',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="mcc_sandbox_moduleMissionSettings_commanderConsole";
+					expression="_this setVariable ['commanderConsole',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="mcc_sandbox_moduleMissionSettings_squadDialogPip";
+					expression="_this setVariable ['squadDialogPip',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="mcc_sandbox_moduleMissionSettings_deleteBody";
+					expression="_this setVariable ['deleteBody',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="mcc_sandbox_moduleMissionSettings_sqlPDA";
+					expression="_this setVariable ['sqlPDA',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="mcc_sandbox_moduleMissionSettings_logistics";
+					expression="_this setVariable ['logistics',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="mcc_sandbox_moduleMissionSettings_groupMarkers";
+					expression="_this setVariable ['groupMarkers',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="mcc_sandbox_moduleMissionSettings_nameTags";
+					expression="_this setVariable ['nameTags',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="mcc_sandbox_moduleMissionSettings_messages";
+					expression="_this setVariable ['messages',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="mcc_sandbox_moduleMissionSettings_sync";
+					expression="_this setVariable ['sync',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute11
+				{
+					property="mcc_sandbox_moduleMissionSettings_saveGear";
+					expression="_this setVariable ['saveGear',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute12
+				{
+					property="mcc_sandbox_moduleMissionSettings_roleSelection";
+					expression="_this setVariable ['roleSelection',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute13
+				{
+					property="mcc_sandbox_moduleMissionSettings_timeAccel";
+					expression="_this setVariable ['timeAccel',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute14
+				{
+					property="mcc_sandbox_moduleMissionSettings_respawnMenu";
+					expression="_this setVariable ['respawnMenu',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute15
+				{
+					property="mcc_sandbox_moduleMissionSettings_squadDialog";
+					expression="_this setVariable ['squadDialog',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=16;
+			};
+		};
+		class Item59
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9176.7373,14.969416,21611.357};
+				angles[]={0.013332055,0,0.011995304};
+			};
+			id=665;
+			type="acre_api_DifficultySettings";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="acre_api_DifficultySettings_Interference";
+					expression="_this setVariable ['Interference',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="acre_api_DifficultySettings_SignalLoss";
+					expression="_this setVariable ['SignalLoss',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="acre_api_DifficultySettings_FullDuplex";
+					expression="_this setVariable ['FullDuplex',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=3;
+			};
+		};
+		class Item60
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9176.9912,14.972385,21611.363};
+				angles[]={0.013332055,0,0.011995304};
+			};
+			id=666;
+			type="acre_api_nameChannels";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="acre_api_nameChannels_Channel_1";
+					expression="_this setVariable ['Channel_1',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Plt Net 1";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="acre_api_nameChannels_Channel_2";
+					expression="_this setVariable ['Channel_2',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Air";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="acre_api_nameChannels_Channel_3";
+					expression="_this setVariable ['Channel_3',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="acre_api_nameChannels_Channel_4";
+					expression="_this setVariable ['Channel_4',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="acre_api_nameChannels_Channel_5";
+					expression="_this setVariable ['Channel_5',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="acre_api_nameChannels_SideSelect";
+					expression="_this setVariable ['SideSelect',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="acre_api_nameChannels_Channel_6";
+					expression="_this setVariable ['Channel_6',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="acre_api_nameChannels_Channel_7";
+					expression="_this setVariable ['Channel_7',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="acre_api_nameChannels_Channel_8";
+					expression="_this setVariable ['Channel_8',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="acre_api_nameChannels_Channel_9";
+					expression="_this setVariable ['Channel_9',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="acre_api_nameChannels_Channel_10";
+					expression="_this setVariable ['Channel_10',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				nAttributes=11;
+			};
+		};
+		class Item61
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9176.749,14.964211,21611.758};
+				angles[]={0.013332055,0,0.011995304};
+			};
+			id=667;
+			type="ACE_ModuleCheckPBOs";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ACE_ModuleCheckPBOs_CheckAll";
+					expression="_this setVariable ['CheckAll',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ACE_ModuleCheckPBOs_Whitelist";
+					expression="_this setVariable ['Whitelist',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[]";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ACE_ModuleCheckPBOs_Action";
+					expression="_this setVariable ['Action',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				nAttributes=3;
+			};
+		};
+		class Item62
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9177.2744,14.970629,21611.748};
+				angles[]={0.013332055,0,0.011995304};
+			};
+			id=668;
+			type="ACE_ModuleMap";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ACE_ModuleMap_MapShake";
+					expression="_this setVariable ['MapShake',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ACE_ModuleMap_MapShowCursorCoordinates";
+					expression="_this setVariable ['MapShowCursorCoordinates',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ACE_ModuleMap_DefaultChannel";
+					expression="_this setVariable ['DefaultChannel',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ACE_ModuleMap_MapIllumination";
+					expression="_this setVariable ['MapIllumination',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ACE_ModuleMap_MapGlow";
+					expression="_this setVariable ['MapGlow',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ACE_ModuleMap_MapLimitZoom";
+					expression="_this setVariable ['MapLimitZoom',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=6;
+			};
+		};
+		class Item63
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9177.0068,14.967421,21611.748};
+				angles[]={0.013332055,0,0.011995304};
+			};
+			id=669;
+			type="ACE_ModuleExplosive";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ACE_ModuleExplosive_RequireSpecialist";
+					expression="_this setVariable ['RequireSpecialist',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ACE_ModuleExplosive_PunishNonSpecialists";
+					expression="_this setVariable ['PunishNonSpecialists',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ACE_ModuleExplosive_ExplodeOnDefuse";
+					expression="_this setVariable ['ExplodeOnDefuse',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=3;
+			};
+		};
+		class Item64
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9177.5498,14.973886,21611.752};
+				angles[]={0.013332055,0,0.011995304};
+			};
+			id=670;
+			type="ace_map_gestures_moduleSettings";
+			atlOffset=-9.5367432e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_map_gestures_moduleSettings_maxRange";
+					expression="_this setVariable ['maxRange',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=7;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_map_gestures_moduleSettings_enabled";
+					expression="_this setVariable ['enabled',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ace_map_gestures_moduleSettings_defaultLeadColor";
+					expression="_this setVariable ['defaultLeadColor',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="1,0.88,0,0.95";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ace_map_gestures_moduleSettings_defaultColor";
+					expression="_this setVariable ['defaultColor',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="1,0.88,0,0.7";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ace_map_gestures_moduleSettings_interval";
+					expression="_this setVariable ['interval',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0.029999999;
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item65
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9179.7695,15.000602,21611.746};
+				angles[]={0.013332055,0,0.011995304};
+			};
+			id=671;
+			type="ACE_ModuleHearing";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ACE_ModuleHearing_autoAddEarplugsToUnits";
+					expression="_this setVariable ['autoAddEarplugsToUnits',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ACE_ModuleHearing_EnableCombatDeafness";
+					expression="_this setVariable ['EnableCombatDeafness',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ACE_ModuleHearing_enabledForZeusUnits";
+					expression="_this setVariable ['enabledForZeusUnits',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ACE_ModuleHearing_DisableEarRinging";
+					expression="_this setVariable ['DisableEarRinging',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item66
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9178.1299,14.980755,21611.76};
+				angles[]={0.013332055,0,0.011995304};
+			};
+			id=672;
+			type="ACE_ModuleRespawn";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ACE_ModuleRespawn_RemoveDeadBodiesDisconnected";
+					expression="_this setVariable ['RemoveDeadBodiesDisconnected',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ACE_ModuleRespawn_SavePreDeathGear";
+					expression="_this setVariable ['SavePreDeathGear',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item67
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9179.5039,14.99727,21611.758};
+				angles[]={0.013332055,0,0.011995304};
+			};
+			id=673;
+			type="ace_weather_ModuleSettings";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_weather_ModuleSettings_useACEWeather";
+					expression="_this setVariable ['useACEWeather',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_weather_ModuleSettings_serverUpdateInterval";
+					expression="_this setVariable ['serverUpdateInterval',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=60;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ace_weather_ModuleSettings_syncMisc";
+					expression="_this setVariable ['syncMisc',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ace_weather_ModuleSettings_syncRain";
+					expression="_this setVariable ['syncRain',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ace_weather_ModuleSettings_enableServerController";
+					expression="_this setVariable ['enableServerController',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ace_weather_ModuleSettings_syncWind";
+					expression="_this setVariable ['syncWind',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=6;
+			};
+		};
+		class Item68
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9177.8506,14.977477,21611.754};
+				angles[]={0.013332055,0,0.011995304};
+			};
+			id=674;
+			type="ace_zeus_moduleSettings";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_zeus_moduleSettings_remoteWind";
+					expression="_this setVariable ['remoteWind',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_zeus_moduleSettings_zeusAscension";
+					expression="_this setVariable ['zeusAscension',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ace_zeus_moduleSettings_radioOrdnance";
+					expression="_this setVariable ['radioOrdnance',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ace_zeus_moduleSettings_revealMines";
+					expression="_this setVariable ['revealMines',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ace_zeus_moduleSettings_zeusBird";
+					expression="_this setVariable ['zeusBird',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item69
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9178.4102,14.984043,21611.766};
+				angles[]={0.013332055,0,0.011995304};
+			};
+			id=675;
+			type="ACE_ModuleNameTags";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ACE_ModuleNameTags_showCursorTagForVehicles";
+					expression="_this setVariable ['showCursorTagForVehicles',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ACE_ModuleNameTags_showNamesForAI";
+					expression="_this setVariable ['showNamesForAI',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ACE_ModuleNameTags_showVehicleCrewInfo";
+					expression="_this setVariable ['showVehicleCrewInfo',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ACE_ModuleNameTags_showPlayerNames";
+					expression="_this setVariable ['showPlayerNames',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ACE_ModuleNameTags_playerNamesViewDistance";
+					expression="_this setVariable ['playerNamesViewDistance',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=30;
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item70
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9178.6885,14.987309,21611.771};
+				angles[]={0.013332055,0,0.011995304};
+			};
+			id=676;
+			type="ace_finger_moduleSettings";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_finger_moduleSettings_maxRange";
+					expression="_this setVariable ['maxRange',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=7;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_finger_moduleSettings_enabled";
+					expression="_this setVariable ['enabled',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item71
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9178.9795,14.990829,21611.77};
+				angles[]={0.013332055,0,0.011995304};
+			};
+			id=677;
+			type="ACE_moduleMedicalSettings";
+			atlOffset=9.5367432e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ACE_moduleMedicalSettings_litterCleanUpDelay";
+					expression="_this setVariable ['litterCleanUpDelay',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1800;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ACE_moduleMedicalSettings_enableScreams";
+					expression="_this setVariable ['enableScreams',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ACE_moduleMedicalSettings_preventInstaDeath";
+					expression="_this setVariable ['preventInstaDeath',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ACE_moduleMedicalSettings_bleedingCoefficient";
+					expression="_this setVariable ['bleedingCoefficient',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ACE_moduleMedicalSettings_increaseTrainingInLocations";
+					expression="_this setVariable ['increaseTrainingInLocations',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ACE_moduleMedicalSettings_enableUnconsciousnessAI";
+					expression="_this setVariable ['enableUnconsciousnessAI',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ACE_moduleMedicalSettings_remoteControlledAI";
+					expression="_this setVariable ['remoteControlledAI',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ACE_moduleMedicalSettings_painCoefficient";
+					expression="_this setVariable ['painCoefficient',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ACE_moduleMedicalSettings_AIDamageThreshold";
+					expression="_this setVariable ['AIDamageThreshold',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ACE_moduleMedicalSettings_playerDamageThreshold";
+					expression="_this setVariable ['playerDamageThreshold',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="ACE_moduleMedicalSettings_level";
+					expression="_this setVariable ['level',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute11
+				{
+					property="ACE_moduleMedicalSettings_allowLitterCreation";
+					expression="_this setVariable ['allowLitterCreation',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute12
+				{
+					property="ACE_moduleMedicalSettings_keepLocalSettingsSynced";
+					expression="_this setVariable ['keepLocalSettingsSynced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute13
+				{
+					property="ACE_moduleMedicalSettings_medicSetting";
+					expression="_this setVariable ['medicSetting',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=14;
+			};
+		};
+		class Item72
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9179.251,14.994178,21611.762};
+				angles[]={0.013332055,0,0.011995304};
+			};
+			id=678;
+			type="ACE_moduleMedicalMenuSettings";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ACE_moduleMedicalMenuSettings_allow";
+					expression="_this setVariable ['allow',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item73
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9180.2871,15.011938,21611.736};
+				angles[]={0.013336525,0,0.029326396};
+			};
+			id=679;
+			type="ACE_ModuleSitting";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ACE_ModuleSitting_enable";
+					expression="_this setVariable ['enable',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item74
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9180.5391,15.0193,21611.738};
+				angles[]={0.013336525,0,0.029326396};
+			};
+			id=680;
+			type="ace_captives_moduleSettings";
+			atlOffset=9.5367432e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_captives_moduleSettings_requireSurrender";
+					expression="_this setVariable ['requireSurrender',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_captives_moduleSettings_allowHandcuffOwnSide";
+					expression="_this setVariable ['allowHandcuffOwnSide',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ace_captives_moduleSettings_allowSurrender";
+					expression="_this setVariable ['allowSurrender',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=3;
+			};
+		};
+		class Item75
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9180.0313,15.004374,21611.742};
+				angles[]={0.013336525,0,0.029326396};
+			};
+			id=681;
+			type="ace_spectator_moduleSettings";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_spectator_moduleSettings_sidesFilter";
+					expression="_this setVariable ['sidesFilter',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_spectator_moduleSettings_cameraModes";
+					expression="_this setVariable ['cameraModes',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=3;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ace_spectator_moduleSettings_unitsFilter";
+					expression="_this setVariable ['unitsFilter',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ace_spectator_moduleSettings_visionModes";
+					expression="_this setVariable ['visionModes',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=3;
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item76
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9180.7939,15.026866,21611.732};
+				angles[]={0.013336525,0,0.029326396};
+			};
+			id=682;
+			type="ACE_moduleRearmSettings";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ACE_moduleRearmSettings_level";
+					expression="_this setVariable ['level',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item77
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9181.042,15.034216,21611.727};
+				angles[]={0.013336525,0,0.029326396};
+			};
+			id=683;
+			type="ACE_moduleRepairSettings";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ACE_moduleRepairSettings_fullRepairLocation";
+					expression="_this setVariable ['fullRepairLocation',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ACE_moduleRepairSettings_engineerSetting_fullRepair";
+					expression="_this setVariable ['engineerSetting_fullRepair',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ACE_moduleRepairSettings_engineerSetting_Repair";
+					expression="_this setVariable ['engineerSetting_Repair',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ACE_moduleRepairSettings_consumeItem_ToolKit";
+					expression="_this setVariable ['consumeItem_ToolKit',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ACE_moduleRepairSettings_repairDamageThreshold";
+					expression="_this setVariable ['repairDamageThreshold',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0.60000002;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ACE_moduleRepairSettings_wheelRepairRequiredItems";
+					expression="_this setVariable ['wheelRepairRequiredItems',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ACE_moduleRepairSettings_repairDamageThreshold_Engineer";
+					expression="_this setVariable ['repairDamageThreshold_Engineer',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0.40000001;
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ACE_moduleRepairSettings_engineerSetting_Wheel";
+					expression="_this setVariable ['engineerSetting_Wheel',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ACE_moduleRepairSettings_addSpareParts";
+					expression="_this setVariable ['addSpareParts',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=9;
+			};
+		};
+		class Item78
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9181.2979,15.041807,21611.719};
+				angles[]={0.013336525,0,0.029326396};
+			};
+			id=684;
+			type="ace_nightvision_ModuleSettings";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_nightvision_ModuleSettings_disableNVGsWithSights";
+					expression="_this setVariable ['disableNVGsWithSights',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item79
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9181.54,15.048997,21611.715};
+				angles[]={0.013336525,0,0.029326396};
+			};
+			id=685;
+			type="ACE_ModuleBlueForceTracking";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ACE_ModuleBlueForceTracking_Interval";
+					expression="_this setVariable ['Interval',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ACE_ModuleBlueForceTracking_Enabled";
+					expression="_this setVariable ['Enabled',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ACE_ModuleBlueForceTracking_HideAiGroups";
+					expression="_this setVariable ['HideAiGroups',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ACE_ModuleBlueForceTracking_ShowPlayerNames";
+					expression="_this setVariable ['ShowPlayerNames',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item80
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9177.8252,14.97153,21612.178};
+				angles[]={0.013332055,0,0.011995304};
+			};
+			name="HC_0";
+			isPlayable=1;
+			id=686;
+			type="HeadlessClient_F";
+		};
+		class Item81
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9178.1162,14.975023,21612.178};
+				angles[]={0.013332055,0,0.011995304};
+			};
+			name="HC_1";
+			isPlayable=1;
+			id=687;
+			type="HeadlessClient_F";
+		};
+		class Item82
+		{
+			dataType="Layer";
+			name="Quarry Party  objects";
+			id=688;
+			atlOffset=185.97;
+		};
+		class Item83
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9180.6953,16.314196,21674.342};
+				angles[]={0.0053232545,2.565634,6.2818413};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=691;
+			type="rhsusf_M1083A1P2_wd_fmtv_usarmy";
+			atlOffset=-0.0030002594;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[""ACE_fieldDressing""],[4]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item84
+		{
+			dataType="Marker";
+			position[]={9168.2813,14.755264,21626.082};
+			name="respawn_west";
+			type="Empty";
+			id=692;
+		};
+	};
+	class Connections
+	{
+		class LinkIDProvider
+		{
+			nextID=4;
+		};
+		class Links
+		{
+			items=4;
+			class Item0
+			{
+				linkID=0;
+				item0=342;
+				item1=298;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item1
+			{
+				linkID=1;
+				item0=343;
+				item1=342;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item2
+			{
+				linkID=2;
+				item0=344;
+				item1=342;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item3
+			{
+				linkID=3;
+				item0=690;
+				item1=689;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+		};
+	};
+};
