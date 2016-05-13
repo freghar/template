@@ -9,30 +9,15 @@
  * to class-based loadouts
  *
  * examples:
- *   "file.sqf" call A3MT_fnc_factionsExec;                  //on init line
- *   ["file1.sqf", "file2.sqf"] call A3MT_fnc_factionsExec;  //on init line
- *   [_unit, "file.sqf] call A3MT_fnc_factionsExec;          //anywhere
+ *   [_unit, "file.sqf", { some code }] call A3MT_fnc_factionsExec;
  */
 
 /* compatibility with unit init line - omit the explicit _unit */
-private "_unit";
-if (!isNil "this") then {
-    _unit = this;
-} else {
-    _unit = (_this select 0);
-    _this deleteAt 0;
-};
-
-/* allow both single-file string and multi-file array */
-private "_files";
-if (typeName _this == "ARRAY") then {
-    _files = _this;
-} else {
-    _files = [_this];
-};
+private _unit = (_this select 0);
+_this deleteAt 0;
 
 /* catch errors before executing anything */
-private _codes = _files apply {
+private _codes = _this apply {
     if (typeName _x != "CODE") then {
         compile preprocessFileLineNumbers
             format ["features\Custom_Factions\loadouts\%1", _x];
