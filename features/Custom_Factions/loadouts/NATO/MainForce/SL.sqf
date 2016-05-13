@@ -41,7 +41,3 @@ _this linkItem "ItemCompass";
 _this linkItem "ItemWatch";
 _this linkItem "ItemRadioAcreFlagged";
 _this linkItem "ItemGPS";
-
-sleep 10;
-removeHeadgear _this;
-sleep 10;

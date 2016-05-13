@@ -16,11 +16,11 @@
 
 /* use Arsenal-exported loadouts based on unit class name, to create "factions"
  * Requires: CBA */
-//#define FEAT_CUSTOM_FACTIONS
+#define FEAT_CUSTOM_FACTIONS
 
 /* register useful extra functions to the Ares/Zeus interface,
  * Requires: Ares */
-//#define FEAT_ARES_EXTRAS
+#define FEAT_ARES_EXTRAS
 
 /* move Curator-spawnd units to __SERVER__ after a short while, saving
  * bandwidth and potentially other resources */

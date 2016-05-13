@@ -1,2 +1,11 @@
 // See README in the previous directory on how to use this file.
 
+// Playable unit loadouts done via init lines due to possible
+// race conditions. Ammo boxes also done via init lines as we want
+// to re-use the same box class for multiple content types.
+
+// some basic loadout for vehicles, no 
+["Car+", "Vehicles\car.sqf"],
+["Tank+", "Vehicles\tank.sqf"],
+["Helicopter+", "Vehicles\heli.sqf"],
+["Ship+", "Vehicles\ship.sqf"]
