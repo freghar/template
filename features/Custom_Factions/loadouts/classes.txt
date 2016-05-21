@@ -1,2 +1,4 @@
 // See README in the previous directory on how to use this file.
 
+//["B_Soldier_SL_F", "testload.sqf"]
+["B_Soldier_AAR_F", "testload.sqf", { systemchat "gear loaded" }]
